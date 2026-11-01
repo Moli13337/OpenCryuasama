@@ -1,0 +1,41 @@
+.reach-development{position:absolute;inset:0;z-index:24;display:flex;flex-direction:column;justify-content:center;align-items:center;pointer-events:none;overflow:hidden;background:radial-gradient(ellipse,#752150 0,#260d2c 58%,#090913 100%)}
+.reach-development[hidden],.reach-development [hidden]{display:none!important}
+.reach-development[data-stage=title]{background:radial-gradient(ellipse,#ffd990aa,#90276777 40%,#130f2baa 90%)}
+.reach-development__title{position:relative;z-index:3;width:100%;height:60%;display:flex;align-items:center;justify-content:center;transform-origin:center;will-change:transform}
+.reach-development__art{width:112%;height:112%;max-width:none;object-fit:contain;filter:drop-shadow(0 0 1cqw #ffb13c88)}
+.reach-development__multiplier{font:1000 italic 49cqw/.95 Georgia,serif;letter-spacing:-.09em;padding-right:5%;color:#fff0b3;-webkit-text-stroke:1.5cqw #5c1834;paint-order:stroke fill;text-shadow:0 1cqw #e89024,0 2cqw #6e3216,0 3cqw #180917,0 0 6cqw #ff644c}
+.reach-development[data-level='3'] .reach-development__multiplier{color:#ffe9fd;text-shadow:0 1cqw #dd85ec,0 2cqw #8743cf,0 3cqw #210c29,0 0 7cqw #ff99de}
+.reach-development small{position:relative;z-index:3;margin-top:-4cqw;font:900 4.2cqw/1.4 serif;letter-spacing:.04em;color:#fff4d9;text-shadow:0 1px 4px #250327,0 0 6px #5d1741}
+.reach-development__ring{position:absolute;left:5%;top:15%;width:90%;aspect-ratio:1;border:1.2cqw double #ffc674;border-radius:50%;box-shadow:0 0 4cqw #ff49b7,inset 0 0 3cqw #ff49b7}
+.reach-development__rays{position:absolute;inset:-45%;background:repeating-conic-gradient(from 15deg,#ffeba033 0 1deg,transparent 2deg 12deg,#ff94dc55 13deg 14deg,transparent 15deg 30deg);will-change:transform}
+.reach-development__storm{position:absolute;inset:0;overflow:hidden}
+.reach-development__storm>.symbol-frame{position:absolute;left:25%;top:26%;width:50%;height:46%;will-change:transform,opacity}
+.reach-development__storm .symbol-art{width:100%;height:100%;display:none;overflow:visible}
+.reach-development__storm .art-ready .symbol-art{display:block}
+.reach-development__storm .art-ready .symbol-fallback{display:none}
+.reach-development__storm .symbol-fallback{font:900 italic 34cqw/1 Georgia;color:var(--symbol-color);-webkit-text-stroke:1px #fff}
+.layered-scene[data-development=forecast] .layered-ornament{opacity:.35}
+.layered-scene[data-development-burst=true]>.layered-caption,.layered-scene[data-development-burst=true]>.layered-title-art,.layered-scene[data-development-burst=true]>[data-impact]{visibility:hidden}
+.layered-scene[data-development=climax] .layered-ornament{filter:drop-shadow(0 0 4px #ffd897)}
+.lcd[data-long-reach=true] .lcd-push{z-index:30;top:70%;bottom:auto}
+.lcd[data-long-reach=true] .lcd-push::after{content:'押して、光を呼べ';display:block;font:800 3.5cqw/1.5 sans-serif;letter-spacing:.05em}
+.lcd[data-long-reach=true] .lcd-push[data-repeat=true]{min-width:50%;font-size:6.5cqw}
+.lcd[data-long-reach=true] .lcd-push[data-repeat=true]::after{content:'連打！'}
+@media(prefers-reduced-motion:reduce){.reach-development__art{filter:none}.reach-development__ring{box-shadow:none}.reach-development__storm>.symbol-frame{will-change:auto}}
+.reach-development[data-level='2']{background:radial-gradient(ellipse,#a5ffd688,#16894466,#071f2088)}
+.reach-development[data-level='2'] .reach-development__ring{border-color:#acffd0;box-shadow:0 0 5cqw #29ff8d,inset 0 0 3cqw #50ffa1}
+.reach-development[data-level='2'] .reach-development__rays{background:repeating-conic-gradient(#b1ffc855 0 1deg,transparent 2deg 12deg,#1cce7844 13deg 14deg,transparent 15deg 30deg)}
+.reach-development[data-level='3']{background:radial-gradient(ellipse,#fff4cba0,#a8162455,#200810aa)}
+.reach-development[data-level='3'] .reach-development__ring{border-color:#ffe5ae;box-shadow:0 0 7cqw #ff233c,inset 0 0 5cqw #ff4931}
+.reach-development[data-level='3'] .reach-development__art{filter:drop-shadow(0 0 2cqw #ff3636)}
+.reach-development[data-level='3'] .reach-development__rays{background:repeating-conic-gradient(#ffe6a366 0 2deg,transparent 3deg 12deg,#ff3c3955 13deg 15deg,transparent 16deg 30deg)}
+.reach-development[data-tone=pearl],.reach-development[data-tone=pearl][data-level='2'],.reach-development[data-tone=pearl][data-level='3']{background:radial-gradient(ellipse,#ff83c5aa,#94346d88 48%,#160e20de)}
+.reach-development[data-tone=pearl][data-stage=storm]{background:transparent}
+.reach-development[data-tone=pearl][data-stage=storm] .reach-development__rays{opacity:.14}
+.reach-development[data-tone=pearl][data-stage=storm] .reach-development__ring{opacity:.22}
+.reach-development[data-tone=pearl][data-stage=storm] .reach-development__storm{opacity:.48}
+.reach-development[data-tone=pearl] .reach-development__ring{border-color:#ff8acb;box-shadow:0 0 5cqw #ff57ad,inset 0 0 4cqw #ff57ad}
+.reach-development[data-tone=pearl] .reach-development__rays{background:repeating-conic-gradient(#ff69b9aa 0 1deg,transparent 2deg 12deg,#ff9bd866 13deg 14deg,transparent 15deg 30deg)}
+.reach-development[data-tone=pearl] .reach-development__art{filter:grayscale(1) brightness(2.1) drop-shadow(0 0 2cqw #ff59b5)}
+.reach-development[data-tone=pearl] .reach-development__multiplier,.reach-development[data-tone=pearl][data-level='3'] .reach-development__multiplier{color:#fff;-webkit-text-stroke:1cqw #9a3b76;text-shadow:0 1cqw #ff65b6,0 2cqw #62536d,0 0 5cqw #ff65b6}
+.layered-scene[data-kind=allure] .reach-development[data-stage=title][data-level='2'] .reach-development__art,.layered-scene[data-kind=allure] .reach-development[data-stage=title][data-level='3'] .reach-development__art{width:96%;height:100%}

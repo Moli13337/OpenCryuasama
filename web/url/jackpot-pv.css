@@ -1,0 +1,41 @@
+.jackpot-pv{position:absolute;inset:0;z-index:5;overflow:hidden;contain:layout paint;isolation:isolate;pointer-events:none;background:radial-gradient(ellipse at 65% 30%,#48253f,#120c19 65%);container-type:inline-size;--pv-ink:#e792c7;--pv-impact:0;--pv-veil:0;--pv-travel:0%}
+.jackpot-pv[hidden],.jackpot-pv [hidden]{display:none!important}
+.jackpot-pv img{position:absolute;display:block;margin:0;pointer-events:none;user-select:none;will-change:transform}
+.jackpot-pv__room{inset:0;width:100%;height:100%;object-fit:cover;object-position:66% 55%;transform-origin:50% 50%;opacity:.74}
+.jackpot-pv__actor{inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 24%;transform-origin:50% 30%;z-index:1}
+.jackpot-pv__actor[data-shot=full]{object-position:70% 30%}
+.jackpot-pv__actor[data-shot=arm]{object-position:50% 21%}
+.jackpot-pv__actor[data-shot=heart]{object-position:50% 27%}
+.jackpot-pv__actor[data-camera=wide]{object-fit:contain;object-position:50% 65%;inset:0 0 0 5%;width:95%}
+.jackpot-pv__actor[data-camera=slit]{clip-path:polygon(0 13%,100% 22%,100% 70%,0 61%);object-position:50% 23%;filter:drop-shadow(0 0 4px #e9bcff)}
+.jackpot-pv[data-theme=mint]{--pv-ink:#a8e0b2}.jackpot-pv[data-theme=violet]{--pv-ink:#bd9ff2}
+.jackpot-pv__rays{position:absolute;inset:-30%;z-index:2;pointer-events:none;opacity:var(--pv-power,.3);background:repeating-conic-gradient(from 2deg at 50% 50%,transparent 0deg 16deg,#f5e7ff 17deg 18deg,transparent 19deg 32deg);transform:rotate(var(--pv-orbit)) scale(calc(1 + var(--pv-impact)*.2));mask-image:radial-gradient(ellipse,transparent 24%,#000 57%,transparent 74%);mix-blend-mode:screen}
+.jackpot-pv__ribbon{position:absolute;inset:-12%;z-index:2;pointer-events:none;transform:translateX(var(--pv-travel));opacity:.34;background:linear-gradient(116deg,transparent 0 13%,var(--pv-ink) 13.2% 13.45%,transparent 13.7% 83%,var(--pv-ink) 83.1% 83.3%,transparent 83.5%);border:1px solid #ffffff13}
+.jackpot-pv__shade{position:absolute;inset:0;z-index:3;background:linear-gradient(180deg,#08071155,transparent 20%,transparent 72%,#080611c9),linear-gradient(90deg,#13061a44,transparent 19%,transparent 82%,#13061a44);box-shadow:inset 0 0 9cqw #05050988}
+.jackpot-pv__shade:after{content:'';position:absolute;inset:0;opacity:var(--pv-veil);background:linear-gradient(110deg,#d8bee866,transparent 50%)}
+.jackpot-pv__sweep{position:absolute;inset:-25%;z-index:2;background:linear-gradient(110deg,transparent 42%,#fff2bfaa 49%,#d687f433 54%,transparent 59%);transform:translateX(var(--pv-sweep));mix-blend-mode:screen;opacity:.7}
+.jackpot-pv__shockwave{position:absolute;left:12%;top:24%;width:76%;aspect-ratio:1;z-index:2;border:2px solid var(--pv-ink);border-radius:50%;box-shadow:0 0 12px var(--pv-ink),inset 0 0 7px #fff2c0;transform:scale(var(--pv-ring));opacity:calc(var(--pv-power)*.75);mix-blend-mode:screen}
+.jackpot-pv__sparks{position:absolute;inset:-20%;z-index:2;opacity:.8;transform:rotate(var(--pv-orbit));background:radial-gradient(ellipse at 15% 35%,#fff 0 1px,transparent 3px),radial-gradient(ellipse at 28% 14%,#ffedab 0 2px,transparent 5px),radial-gradient(ellipse at 83% 32%,#ffbded 0 2px,transparent 5px),radial-gradient(ellipse at 76% 80%,#fff 0 1px,transparent 4px),radial-gradient(ellipse at 12% 76%,#beffcf 0 2px,transparent 4px),radial-gradient(ellipse at 90% 62%,#fff5a3 0 2px,transparent 6px),radial-gradient(ellipse at 43% 90%,#fff 0 1px,transparent 3px);mix-blend-mode:screen}
+.jackpot-pv[data-reduced=true] .jackpot-pv__sparks,.jackpot-pv[data-reduced=true] .jackpot-pv__shockwave,.jackpot-pv[data-reduced=true] .jackpot-pv__sweep{display:none}
+.jackpot-pv[data-reduced=true] .jackpot-pv__rays,.jackpot-pv[data-reduced=true] .jackpot-pv__ribbon{display:none}
+@media(prefers-reduced-motion:reduce){.jackpot-pv img{will-change:auto}}
+
+/* All modulation is driven by the song clock, never an autonomous CSS animation. */
+.jackpot-pv[data-premium=true] .jackpot-pv__actor{filter:brightness(var(--pv-character-light,1)) saturate(var(--pv-character-saturation,1.12)) hue-rotate(var(--pv-character-hue,0deg)) drop-shadow(0 0 var(--pv-character-glow,0cqw) var(--pv-ink));will-change:transform,opacity}
+.jackpot-pv[data-premium=true] .jackpot-pv__actor[data-shot^=premium-]{object-position:50% 30%;transform-origin:50% 35%}
+.jackpot-pv[data-premium=true] .jackpot-pv__shade{box-shadow:inset 0 0 9cqw #05050988,inset 0 0 2cqw #e6adfa20}
+.jackpot-pv[data-premium=true] .jackpot-pv__room{filter:brightness(var(--pv-room-light,1)) saturate(calc(1.1 + var(--pv-rainbow,0)*.32))}
+.jackpot-pv[data-premium=true][data-reduced=true] .jackpot-pv__actor{filter:none;will-change:auto}
+
+/* Song-wide rainbow layers: the center stays clear so faces retain detail. */
+.jackpot-pv__aurora,.jackpot-pv__prism{display:none;position:absolute;pointer-events:none}
+.jackpot-pv[data-premium=true] .jackpot-pv__aurora{display:block;inset:-18%;z-index:0;opacity:var(--pv-aurora,0);background:radial-gradient(ellipse at 10% 10%,#ff3fa8bb,transparent 48%),radial-gradient(ellipse at 88% 26%,#825affdd,transparent 47%),radial-gradient(ellipse at 15% 87%,#42ffdda8,transparent 48%),conic-gradient(from 20deg at 52% 55%,#ff629644,#ffc85299,#66ffc344,#6c9cff77,#e88cff99,#ff629644);mix-blend-mode:screen;transform:translateX(var(--pv-aurora-x,0%)) rotate(var(--pv-aurora-angle,0deg)) scale(1.12);mask-image:radial-gradient(ellipse at 50% 36%,transparent 12%,#0009 44%,#000 78%);-webkit-mask-image:radial-gradient(ellipse at 50% 36%,transparent 12%,#0009 44%,#000 78%)}
+.jackpot-pv[data-premium=true] .jackpot-pv__prism{display:block;inset:-28%;z-index:2;opacity:var(--pv-prism,0);background:repeating-conic-gradient(from 5deg,transparent 0deg 19deg,#ff67b7 20deg 26deg,transparent 28deg 49deg,#ffc747 50deg 56deg,transparent 58deg 79deg,#63ffd4 80deg 86deg,transparent 88deg 109deg,#8aabff 110deg 116deg,transparent 118deg 139deg,#e791ff 140deg 146deg,transparent 148deg 160deg);mix-blend-mode:screen;transform:rotate(var(--pv-prism-angle,0deg));mask-image:radial-gradient(ellipse at 50% 43%,transparent 0 38%,#000 62%,transparent 82%);-webkit-mask-image:radial-gradient(ellipse at 50% 43%,transparent 0 38%,#000 62%,transparent 82%)}
+.jackpot-pv[data-premium=true] .jackpot-pv__rays{opacity:var(--pv-rays,.3);background:repeating-conic-gradient(from 2deg at 50% 50%,transparent 0deg 16deg,#ffb5dc 17deg 18deg,transparent 19deg 48deg,#fff0a0 49deg 50deg,transparent 51deg 80deg,#97fbd6 81deg 82deg,transparent 83deg 112deg,#b9beff 113deg 114deg,transparent 115deg 144deg)}
+.jackpot-pv[data-premium=true] .jackpot-pv__sparks{opacity:var(--pv-sparkle,.5)}
+.jackpot-pv[data-premium=true] .jackpot-pv__sparks:after{content:'';position:absolute;inset:0;opacity:var(--pv-rainbow,0);transform:rotate(37deg) scale(.86);background:inherit}
+.jackpot-pv[data-premium=true] .jackpot-pv__ribbon{opacity:calc(.2 + var(--pv-rainbow,0)*.35);background:linear-gradient(116deg,transparent 0 13%,#ff8dbd 13.2% 13.45%,transparent 13.7% 24%,#ffd676 24.2% 24.4%,transparent 24.6% 75%,#8effd2 75.1% 75.3%,transparent 75.5% 83%,#acbaff 83.1% 83.3%,transparent 83.5%)}
+.jackpot-pv[data-premium=true] .jackpot-pv__shockwave{border-color:#dac1ff;box-shadow:0 0 10px #b6a5ff88,inset 0 0 8px #ffd0dc66;opacity:calc(var(--pv-rays,.3)*.6)}
+.jackpot-pv[data-premium=true] .jackpot-pv__sweep{opacity:calc(.22 + var(--pv-rainbow,0)*.26);background:linear-gradient(110deg,transparent 42%,#d69eff88 48%,#91ffdc66 51%,#ffd78b44 54%,transparent 59%)}
+.jackpot-pv[data-premium=true][data-reduced=true] .jackpot-pv__aurora,.jackpot-pv[data-premium=true][data-reduced=true] .jackpot-pv__prism{display:none}
+.jackpot-pv[data-premium=true][data-reduced=true] .jackpot-pv__room{filter:none}

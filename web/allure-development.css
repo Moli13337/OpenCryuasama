@@ -1,0 +1,31 @@
+.allure-development{position:absolute;inset:0;z-index:25;overflow:hidden;pointer-events:none;isolation:isolate;background:linear-gradient(118deg,#17091bdf,#c2359159 41%,#1d0a24e8 85%);color:#fff}
+.allure-development[hidden]{display:none}
+.allure-development__panes{position:absolute;inset:-8%;display:flex;gap:1.3%;transform:translateX(calc((1 - var(--allure-progress,0))*8%));filter:drop-shadow(0 0 10px #ff6abe)}
+.allure-development__pane{flex:1;border:1px solid #ff9bd3;background:linear-gradient(103deg,#ff8cc055 0,#e764a32b 12%,#ff3b9a10 47%,#ff9ed351 52%,#ff3b9a12 61%,#ff8cc055 100%);box-shadow:inset 2px 0 10px #ff72ba88,2px 0 8px #ff61ad99;transform:skewX(-7deg) scaleX(calc(.78 + var(--allure-progress,0)*.22))}
+.allure-development__pane:nth-child(2){transform:skewX(3deg) scaleX(calc(.88 + var(--allure-progress,0)*.12))}.allure-development__pane:nth-child(3){transform:skewX(10deg) scaleX(calc(.72 + var(--allure-progress,0)*.28))}
+.allure-development__glint{position:absolute;inset:-30%;background:linear-gradient(107deg,transparent 38%,#ff71b900 44%,#ff79c2cc 49%,#ff71b900 54%,transparent 60%);transform:translateX(calc(-95% + var(--allure-progress,0)*170%));mix-blend-mode:screen}
+.allure-development__eyebrow{position:absolute;left:0;right:0;top:13%;text-align:center;font:900 4.7cqw/1.3 'Hiragino Mincho ProN','Yu Mincho',serif;letter-spacing:.1em;color:#fff;text-shadow:0 1px 3px #1d102a,0 0 13px #ff5aac}
+.allure-development__title{display:none;position:absolute;left:0;right:0;top:30%;text-align:center;font:900 31cqw/1.1 'Hiragino Mincho ProN','Yu Mincho',serif;letter-spacing:.12em;color:#fff;-webkit-text-stroke:.55cqw #9d3c79;paint-order:stroke fill;text-shadow:0 3px 3px #2d1b39,0 0 8px #ff5aac,0 0 24px #ff5aac}
+.allure-development__tier{display:none;position:absolute;left:0;right:0;top:69%;text-align:center;font:900 6cqw/1.3 'Hiragino Mincho ProN','Yu Mincho',serif;letter-spacing:.24em;color:#fff;text-shadow:0 2px 4px #1d1029,0 0 12px #ff5aac}
+.allure-development[data-stage=still]{background:radial-gradient(ellipse at 50% 40%,#ff63b955,#241225df 71%)}
+.allure-development[data-stage=still] .allure-development__glint{opacity:.25}
+.allure-development[data-stage=title]{background:radial-gradient(ellipse at 50% 42%,#ff70c5bb,#6a2859bc 49%,#100b1de8)}
+.allure-development[data-stage=title] .allure-development__title,.allure-development[data-stage=title] .allure-development__tier{display:block}
+.allure-development[data-stage=title] .allure-development__panes{opacity:.53;transform:scale(calc(1 + var(--allure-progress,0)*.16))}
+.allure-development[data-stage=title] .allure-development__title{transform:scale(calc(1.45 - var(--allure-progress,0)*.45))}
+.allure-development[data-stage=fracture]{background:repeating-conic-gradient(from 8deg at 51% 46%,#ff88d0cc 0 1deg,#322135d9 2deg 16deg,#ef67b899 17deg 18deg,#3e2948dd 19deg 39deg)}
+.allure-development[data-stage=fracture] .allure-development__panes{transform:scale(calc(1 + var(--allure-progress,0)*.5)) rotate(calc(var(--allure-progress,0)*8deg));opacity:calc(1 - var(--allure-progress,0))}
+.allure-development[data-stage=return]{opacity:calc(1 - var(--allure-progress,0));background:radial-gradient(ellipse,#ff73c4aa,#753460a8 65%,#1d132ad1)}
+.layered-scene[data-kind=allure][data-allure-development=approach] .layered-character{filter:grayscale(.3) drop-shadow(0 0 8px #ff61b8)}
+.layered-scene[data-kind=allure][data-allure-development=still] .layered-character{filter:grayscale(.55) brightness(.8)}
+.layered-scene[data-kind=allure][data-allure-development=title] .layered-character{filter:grayscale(.35) brightness(1.25)}
+.layered-scene[data-kind=allure][data-allure-development=resolve] .layered-character{filter:drop-shadow(0 0 10px #ff69c0)}
+@media(prefers-reduced-motion:reduce){.allure-development__glint{display:none}.allure-development__panes,.allure-development__title{transform:none!important}}
+/* ImageGen multipliers retain their green/red materials rather than a CSS font. */
+.allure-development__title,.allure-development__multiplier{position:absolute;z-index:4;left:3%;top:19%;width:94%;height:62%;object-fit:contain;filter:drop-shadow(0 0 1.5cqw #f23c5d)}
+.allure-development__multiplier{top:12%;filter:drop-shadow(0 0 1.5cqw #36ff89)}
+.allure-development__multiplier[hidden]{display:none}
+.allure-development[data-stage=title]{background:radial-gradient(ellipse,#ff505866,#7b132a88 49%,#100b1dbb)}
+.allure-development[data-stage=title] .allure-development__tier{top:82%;font-size:4.7cqw;color:#ffe4b0}
+.allure-development[data-stage=title] .allure-development__eyebrow{display:none}
+.allure-development[data-stage=title] .allure-development__title{left:7%;width:86%;transform:scale(var(--allure-title-scale,1)) rotate(-3deg)}

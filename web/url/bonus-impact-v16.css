@@ -1,0 +1,16 @@
+.special-fever-card{translate:var(--fever-jolt,0px) 0;filter:drop-shadow(0 0 calc(1px + var(--fever-glow,0)*16px) #ffe599)}
+.special-fever-card:after{content:'';position:absolute;inset:-15%;pointer-events:none;border:2px solid #ffe5b0;border-radius:50%;box-shadow:0 0 35px #fff0a5;opacity:var(--fever-glow,0);transform:scale(calc(1.4 - var(--fever-glow,0)))}
+/* Expand the real LCD, retaining the outer cabinet and physical handle. */
+.machine .lcd.board-monitor-wide{left:var(--board-monitor-left)!important;top:var(--board-monitor-top)!important;width:var(--board-monitor-width)!important;height:var(--board-monitor-height)!important;z-index:12;clip-path:var(--board-monitor-clip)!important;opacity:var(--board-reveal-opacity,1);box-shadow:0 0 32px #ffd5a0;transition:none!important}
+.lcd.board-monitor-wide>.holds,.lcd.board-monitor-wide>.st-counter,.lcd.board-monitor-wide>.right-aim{visibility:hidden}
+@media(prefers-reduced-motion:reduce){.special-fever-card{translate:none;filter:none}.special-fever-card:after{display:none}}
+
+.lcd:not(.board-monitor-wide){opacity:var(--board-reveal-opacity,1)}
+.lcd.win-confirming>.cue,.lcd.win-confirming>.win-flash,.lcd.win-confirming>.win-reward,.lcd.win-confirming>.right-aim{visibility:hidden}
+.lcd.win-confirming>.portrait{animation:none}
+
+/* Keep the blessing announcement and its stopped figures in separate bands. */
+.lcd.board-monitor-wide[data-bonus=blessing]>.cue{top:16%;font-size:10cqw}
+#screen.board-monitor-wide[data-bonus=blessing]>.reels{top:64%;height:18%;left:9%;width:82%}
+.lcd.board-monitor-wide[data-bonus=blessing] [data-reward-title][data-kind=jackpot]{clip-path:inset(0 0 40% 0)}
+.lcd.board-monitor-wide[data-bonus=blessing] [data-kind=jackpot]>.impact-titles__word[data-art=bonus-title]{top:38%!important;width:86%}

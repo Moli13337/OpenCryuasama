@@ -1,0 +1,15 @@
+.debug-banner{margin:0 0 8px;padding:7px 10px;border:1px solid #a77a31;border-radius:7px;background:#33240fcc;color:#ffe2a2;font-size:11px;text-align:center}
+.debug-odds{margin:18px 0;padding:15px;border:1px solid #9a7543;border-radius:9px;background:#242017}
+.debug-odds h3{margin:0 0 8px;font-size:15px;color:#ffe4ad}
+.debug-odds p{margin:7px 0;font-size:11px;line-height:1.6}
+.debug-odds__fields{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+.debug-odds__fields label{display:grid;gap:5px;font-size:12px}
+.debug-odds__fields input{width:100%;box-sizing:border-box;padding:8px;background:#111;color:#fff;border:1px solid #aa9467;border-radius:5px;font:inherit}
+.debug-odds__actions{display:flex;gap:8px}
+.debug-odds__actions button{flex:1;padding:9px 5px;border:1px solid #987c45;border-radius:5px;background:#3a2a18;color:#f6deb5;font-size:11px}
+.debug-odds__actions button:first-child{background:#30513d;border-color:#87ba91}
+#debug-odds-status{color:#d3e9cf}
+.debug-monitor{margin:10px 0;padding:9px;border:1px solid #66533a;border-radius:7px;background:#191715;color:#e9d7b4;font-size:11px}
+.debug-monitor summary{cursor:pointer}
+.debug-monitor output{display:block;margin-top:7px;line-height:1.5;overflow-wrap:anywhere}
+@media(max-width:380px){.debug-odds__fields{grid-template-columns:1fr}}

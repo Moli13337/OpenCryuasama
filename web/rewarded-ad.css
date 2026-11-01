@@ -1,0 +1,18 @@
+#rewarded-ad-open{display:block;width:100%;margin:9px 0 3px;border:1px solid #ae9b6480;border-radius:7px;background:linear-gradient(125deg,#244636,#32253e);padding:12px;color:#f3e5b9;font-size:12px;font-weight:600}
+.rewarded-ad{width:min(94vw,560px);max-height:94svh;padding:25px 22px 20px;border:1px solid #bca56580;background:radial-gradient(ellipse at 85% 10%,#3c294a,transparent 65%),#11141b;overflow:auto}
+.rewarded-ad::backdrop{background:#04060be8;backdrop-filter:none}
+.rewarded-ad__label{margin:0 34px 15px 0;font-size:10px!important;letter-spacing:.1em;color:#cfc4aa!important}
+.rewarded-ad__visual{height:clamp(180px,34svh,290px);display:grid;place-items:center;overflow:hidden;background:radial-gradient(ellipse at 50% 65%,#53406799,transparent 70%),#0a0a11;border:1px solid #a487b333;border-radius:7px}
+.rewarded-ad__visual img{display:block;width:100%;height:100%;object-fit:contain;pointer-events:none;user-select:none;-webkit-user-drag:none}
+.rewarded-ad[data-ad=manager] .rewarded-ad__visual img{width:auto;max-width:100%;object-position:center top}
+.rewarded-ad__kicker{margin:17px 0 5px;font-size:9px!important;letter-spacing:.16em;color:#b7dcab!important}
+.rewarded-ad h2{font-family:'Yu Mincho','Hiragino Mincho ProN',serif;margin:0 0 8px;font-size:clamp(19px,5vw,25px);line-height:1.45;color:#f4e8cd}
+.rewarded-ad__description{margin:0 0 11px;font-size:12px!important;color:#c4bdcc!important;line-height:1.85}
+.rewarded-ad__link{color:#dfc592;font-size:12px;text-underline-offset:4px;display:inline-block;margin:0 0 19px}
+.rewarded-ad__meter{height:4px;background:#a1a68525;border-radius:3px;overflow:hidden}
+.rewarded-ad__meter:after{content:'';display:block;height:100%;background:linear-gradient(90deg,#81ca9c,#d6c18d);transform:scaleX(var(--ad-progress,0));transform-origin:left center}
+.rewarded-ad__status{font-size:11px!important;min-height:21px;margin:10px 0!important;color:#d4cad8!important}
+.rewarded-ad__claim{width:100%;padding:13px 10px;border:1px solid #a4d0a8;border-radius:7px;background:linear-gradient(135deg,#35674c,#284534);font-size:14px;font-weight:700;color:#f7f0d6}
+.rewarded-ad__claim:disabled{opacity:.5;background:#252c2b;border-color:#71807255;cursor:default}
+.rewarded-ad__note{font-size:10px!important;color:#a59bab!important;margin:9px 0 0!important;text-align:center}
+@media(max-height:670px){.rewarded-ad{padding:20px 18px 15px}.rewarded-ad__visual{height:25svh;min-height:120px}.rewarded-ad__label{margin-bottom:10px}.rewarded-ad__kicker{margin-top:12px}.rewarded-ad__link{margin-bottom:12px}}

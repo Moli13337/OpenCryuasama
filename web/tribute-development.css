@@ -1,0 +1,60 @@
+.tribute-development{position:absolute;inset:0;z-index:27;overflow:hidden;isolation:isolate;pointer-events:none;background:radial-gradient(ellipse at 50% 34%,#602251,#140a1f 68%,#050308);font-family:'Hiragino Mincho ProN','Yu Mincho',serif}
+.tribute-development[hidden],.tribute-development [hidden]{display:none!important}
+.tribute-development__backdrop{position:absolute;inset:-4%;pointer-events:none;background:repeating-conic-gradient(from 8deg at 50% 44%,#ff93cf13 0 2deg,transparent 3deg 20deg)}
+/* Three distinct, prepainted backgrounds. Only their transform is animated. */
+.tribute-development[data-stage=linger]{background:radial-gradient(ellipse at 50% 45%,#3766a0,#392262 56%,#181d48)}
+.tribute-development[data-stage=linger] .tribute-development__backdrop{background:linear-gradient(125deg,transparent 18%,#b9deff42 32%,transparent 44%,#af83d337 60%,transparent 72%),repeating-linear-gradient(125deg,transparent 0 11%,#d3eaff1a 12% 13%,transparent 14% 25%)}
+.tribute-development[data-stage=show]{background:radial-gradient(ellipse at 50% 43%,#f6c768,#a93825 40%,#52112f 80%)}
+.tribute-development[data-stage=show] .tribute-development__backdrop{background:repeating-conic-gradient(from 3deg at 50% 43%,#ffdc8770 0 3deg,transparent 4deg 13deg,#ffdd8730 14deg 17deg,transparent 18deg 27deg)}
+.tribute-development[data-stage=more]{background:radial-gradient(ellipse at 50% 43%,#f062b1,#a81771 52%,#50114b)}
+.tribute-development[data-stage=more] .tribute-development__backdrop{background:repeating-linear-gradient(135deg,#ffc1e44d 0 1%,transparent 2% 13%,#ed64bc44 14% 18%,transparent 19% 29%)}
+.tribute-development__art{position:absolute;inset:2% 1% 0;width:98%;height:96%;object-fit:contain;object-position:50% 45%;filter:drop-shadow(0 0 1.5cqw #f147ab);animation:tribute-enter .45s both}
+.tribute-development__actor{position:absolute;inset:0;transform-origin:50% 32%}
+.tribute-development__title{position:absolute;left:2%;top:55%;width:96%;height:32%;object-fit:contain;filter:drop-shadow(0 0 2cqw #e83655);animation:tribute-enter .55s both}
+.tribute-development__line{position:absolute;left:3%;right:3%;top:43%;z-index:2;display:block;text-align:center;font:900 8cqw/1.18 'Hiragino Mincho ProN','Yu Mincho',serif;letter-spacing:.03em;color:#fff5d8;-webkit-text-stroke:.22cqw #461120;paint-order:stroke fill;text-shadow:0 .4cqw #201022,0 0 2cqw #ff49b7;animation:tribute-enter .4s both}
+.tribute-development__line--2{top:57%;font-size:7cqw}
+.tribute-development[data-stage=opening]{background:radial-gradient(ellipse,#760d4a,#0b0210 70%)}
+.tribute-development[data-stage=opening] .tribute-development__line{top:39%;font-size:11cqw;color:#ffd64d;-webkit-text-stroke:.48cqw #c21c3e;text-shadow:0 0 2cqw #ff4261}
+.tribute-development[data-stage=title]{background:radial-gradient(ellipse at 50% 48%,#8a2864,#170916 70%)}
+.tribute-development[data-stage=title] .tribute-development__art{top:0;height:90%;object-position:50% 20%}
+.tribute-development[data-stage=linger] .tribute-development__line,.tribute-development[data-stage=further] .tribute-development__line{color:#fff;text-shadow:0 0 2cqw #ff5cba,0 .5cqw #251028}
+.tribute-development[data-stage=more] .tribute-development__line,.tribute-development[data-stage=bankrupt] .tribute-development__line{color:#ffd651;-webkit-text-stroke:.35cqw #9e1739;text-shadow:0 0 2cqw #fa316d}
+.tribute-development[data-stage=show] .tribute-development__line{top:40%;font-size:12cqw;color:#ffe36e;-webkit-text-stroke:.45cqw #b51c43;text-shadow:0 0 2cqw #ff4da8,0 0 5cqw #ec276f;transform:scale(var(--tribute-push-scale,1));animation:tribute-push-pulse .45s ease-in-out infinite alternate}
+.tribute-development[data-stage=show][data-push-count]:not([data-push-count='0'])::after{content:'';position:absolute;inset:7%;border:1.2cqw solid #ff83c4;box-shadow:inset 0 0 5cqw #ff5ab8,0 0 5cqw #ff5ab8;opacity:calc(var(--tribute-push-flash,0)*.48);pointer-events:none}
+.tribute-development[data-stage=branch]{background:radial-gradient(ellipse at 50% 45%,#161928,#08070e 78%)}
+.tribute-development[data-stage=branch] .tribute-development__art{top:1%;height:88%;object-position:50% 10%}
+.tribute-development[data-stage=branch] .tribute-development__line{top:76%;font-size:6cqw;padding:1.2cqw 1cqw;background:#08050fcf}
+.tribute-development[data-stage=branch] .tribute-development__line--2{top:85%}
+.tribute-development[data-stage=branch] .tribute-development__art,.tribute-development[data-stage=branch] .tribute-development__line{animation:none}
+.tribute-development[data-stage=branch] .tribute-development__line{top:73%;font-size:8cqw;line-height:1.25;padding:1.5cqw 1cqw}
+.tribute-development[data-stage=branch] .tribute-development__line--2{top:85%;font-size:7.5cqw}
+.tribute-development[data-stage=branch][data-branch-cut=return] .tribute-development__line{top:69%;font-size:7.3cqw}
+.tribute-development[data-stage=branch][data-branch-cut=return] .tribute-development__line--2{top:80%;font-size:6.9cqw}
+.tribute-development[data-branch=green][data-stage=branch] .tribute-development__line{color:#79ff9d;-webkit-text-stroke:.22cqw #094a25;text-shadow:0 0 1.6cqw #19f769}
+.tribute-development[data-branch=red][data-stage=branch] .tribute-development__line{color:#ff5564;-webkit-text-stroke:.22cqw #4c0817;text-shadow:0 0 1.6cqw #ff263f}
+.tribute-development__qr{position:absolute;z-index:2;left:18%;top:38%;width:12%;aspect-ratio:1;object-fit:fill;image-rendering:pixelated}
+.tribute-development[data-stage=ending][data-win=true]{background:radial-gradient(ellipse,#881257,#190a20 72%)}
+.tribute-development[data-stage=ending][data-win=true] .tribute-development__art{height:90%}
+.tribute-development[data-stage=ending][data-win=true] .tribute-development__line{top:77%;font-size:11cqw;color:#ffd950;-webkit-text-stroke:.4cqw #9b1840}
+.tribute-development[data-stage=ending][data-win=false]{background:radial-gradient(ellipse at 50% 45%,#551e45,#160819 72%)}
+/* Generated ink owns the lettering; these two bounded slots keep the previous
+   scene-clock motion without CSS filters or an image cache. */
+.tribute-development .tribute-development__line[data-generated=true]{font-size:0!important;line-height:0!important;text-shadow:none!important;-webkit-text-stroke:0!important;height:28%;top:35%;padding:0;background:none}
+.tribute-development__word-art{display:block;width:100%;height:100%;object-fit:contain;pointer-events:none}
+.tribute-development[data-stage=show] .tribute-development__line[data-generated=true]{height:32%;top:32%}
+.tribute-development[data-stage=branch] .tribute-development__line[data-generated=true]{height:20%;top:69%;background:#08050f70}
+.tribute-development[data-stage=branch][data-branch-cut=return] .tribute-development__line[data-generated=true]{height:16%;top:63%}
+.tribute-development[data-stage=branch][data-branch-cut=return] .tribute-development__line--2[data-generated=true]{top:77%}
+.tribute-development[data-stage=ending] .tribute-development__line[data-generated=true]{top:68%;height:22%}
+
+/* The source portrait has transparent headroom. Frame its visible body in
+   the centre without generating another bitmap or placing black text bands. */
+.tribute-development[data-stage=branch][data-branch=red]{background:radial-gradient(ellipse at 50% 42%,#dd4b87,#87274e 55%,#42163d)}
+.tribute-development[data-stage=branch][data-branch=red] .tribute-development__art{left:-30%;top:-36%;width:120%;height:145%;object-position:50% 50%;filter:none}
+.tribute-development[data-stage=branch][data-branch=red] .tribute-development__line[data-generated=true]{background:transparent}
+html[data-quality-preset=light] .tribute-development__backdrop{transform:none!important}
+html[data-quality-preset=light] :is(.tribute-development__art,.tribute-development__title){filter:none}
+
+@keyframes tribute-enter{from{opacity:0;transform:scale(1.25)}to{opacity:1;transform:scale(1)}}
+@keyframes tribute-push-pulse{from{scale:.96}to{scale:1.04}}
+@media(prefers-reduced-motion:reduce){.tribute-development__backdrop,.tribute-development__art,.tribute-development__title,.tribute-development__line{animation:none}}

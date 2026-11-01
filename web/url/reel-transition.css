@@ -1,0 +1,11 @@
+/* Geometry switches while fully transparent. Only JS advances the fade clock,
+   so pause does not leave a compositor animation running independently. */
+.reels.reel-transition{
+  transition:none!important;
+  animation:none!important;
+}
+.reels.reel-transition>.reel{
+  transition:none!important;
+}
+/* Do not set visibility/display/opacity:1 here: hidden scenes must stay hidden.
+   The .symbols rolling animation and individual reel stops remain untouched. */

@@ -1,0 +1,96 @@
+/* Keep the four existing hold slots and their color meanings. */
+#holds i {
+  --hold-core: #43d997;
+  --hold-light: #d4ffe9;
+  --hold-deep: #063f32;
+  --hold-glow: #60f2ba;
+  position: relative;
+  isolation: isolate;
+  flex-shrink: 0;
+  border: 1px solid #8a7350;
+  background: radial-gradient(circle at 46% 38%, #222631, #0a0f17 72%);
+  box-shadow: inset 0 2px 4px #000d, 0 1px 0 #e5ca8738;
+}
+#holds i::before,
+#holds i::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+/* A hollow, unlit socket remains visibly different from a filled jewel. */
+#holds i::before {
+  inset: 12%;
+  border: 1px solid #b89a5a24;
+  box-shadow: inset 0 1px 2px #0008;
+}
+#holds i::after {
+  inset: -18%;
+  z-index: -1;
+  opacity: 0;
+  background: radial-gradient(circle, var(--hold-glow), transparent 70%);
+}
+#holds i.full {
+  border-color: #f4d992 #a8782d #785122 #ffeabe;
+  background:
+    radial-gradient(ellipse at 30% 18%, #fff 0 5%, #ffffffb8 8%, transparent 25%),
+    radial-gradient(ellipse at 45% 36%, var(--hold-light), var(--hold-core) 45%, var(--hold-deep) 82%);
+  box-shadow: inset 0 0 0 1px #fff3, inset -2px -3px 4px #0008,
+    0 0 0 1px #422810, 0 0 0 2px #d6b56888, 0 2px 3px #0009;
+}
+#holds i.full::before {
+  inset: 6%;
+  border: 1px solid #fff6;
+  background: conic-gradient(from 20deg, transparent 0 15%, #ffffff42 16% 20%,
+    transparent 21% 43%, #ffffff30 44% 47%, transparent 48% 73%, #fff5 74% 78%, transparent 79%);
+  box-shadow: inset 1px 1px 2px #fff6, inset -1px -2px 2px #0004;
+}
+#holds i.full::after {
+  opacity: .35;
+  animation: hold-jewel-breathe 4.2s ease-in-out infinite;
+}
+/* full/hot remain compatible when an older renderer has no data-color. */
+#holds i.hot,
+#holds i[data-color='gold'] {
+  --hold-core: #ffd043;
+  --hold-light: #fff7c4;
+  --hold-deep: #8b4409;
+  --hold-glow: #ffe078;
+}
+#holds i[data-color='white'] {
+  --hold-core: #d1e5f0;
+  --hold-light: #ffffff;
+  --hold-deep: #506578;
+  --hold-glow: #d2ecff;
+}
+#holds i[data-color='blue'] {
+  --hold-core: #40a1ff;
+  --hold-light: #d3f5ff;
+  --hold-deep: #092e87;
+  --hold-glow: #66c8ff;
+}
+#holds i[data-color='green'] {
+  --hold-core: #43d997;
+  --hold-light: #d4ffe9;
+  --hold-deep: #063f32;
+  --hold-glow: #60f2ba;
+}
+#holds i[data-color='purple'] {
+  --hold-core: #b266f2;
+  --hold-light: #f1daff;
+  --hold-deep: #47146b;
+  --hold-glow: #d396ff;
+}
+#holds i[data-color='red'] {
+  --hold-core: #ff4864;
+  --hold-light: #ffd4d9;
+  --hold-deep: #780b28;
+  --hold-glow: #ff7183;
+}
+@keyframes hold-jewel-breathe {
+  0%, 100% { opacity: .24; }
+  50% { opacity: .46; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #holds i.full::after { animation: none; opacity: .3; }
+}

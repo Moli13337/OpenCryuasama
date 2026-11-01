@@ -1,0 +1,21 @@
+#volume-open{color:#dbd2ba}
+.audio-settings-dialog{width:min(92vw,420px);padding:30px 25px 24px;background:radial-gradient(ellipse at 100% 0,#3b2c4344,transparent 65%),#12151b;border-color:#9a855c88}
+.audio-settings-dialog h2{font-size:23px;color:#f0e0bf;margin-bottom:7px}
+.audio-settings-intro{margin:0 0 19px}
+.audio-settings-controls{display:grid;gap:5px}
+.audio-setting{display:grid;grid-template-columns:1fr auto;gap:3px 14px;padding:10px 0;font-size:13px;color:#e3dfe9}
+.audio-setting output{font-size:12px;font-variant-numeric:tabular-nums;color:#ccbc99}
+.audio-setting-master{padding-bottom:16px;margin-bottom:6px;border-bottom:1px solid #cfc0a222;color:#f2e4c9;font-weight:600}
+.audio-setting input{grid-column:1/-1;appearance:none;-webkit-appearance:none;width:100%;height:30px;margin:0;cursor:pointer;background:transparent;accent-color:#b9d0ab;touch-action:pan-y}
+.audio-setting input::-webkit-slider-runnable-track{height:5px;border-radius:5px;background:linear-gradient(to right,#bbd6b0 0 var(--volume-fill,70%),#373440 var(--volume-fill,70%) 100%)}
+.audio-setting input::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:19px;height:19px;border-radius:50%;margin-top:-7px;background:#e3dec9;border:3px solid #c0cfae;box-shadow:0 1px 5px #0008}
+.audio-setting input::-moz-range-track{height:5px;background:#373440;border-radius:5px}
+.audio-setting input::-moz-range-progress{height:5px;background:#bbd6b0;border-radius:5px}
+.audio-setting input::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:#e3dec9;border:3px solid #c0cfae}
+.audio-settings-note{font-size:10px!important;line-height:1.8!important;margin:11px 0 18px}
+.audio-settings-storage{font-size:10px!important;color:#e7c898!important;margin:0 0 14px}
+.audio-settings-actions{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.audio-settings-actions button{font-size:11px;padding:10px 12px;border-radius:6px;background:transparent;color:#b5adba;border:1px solid #75687866}
+.audio-settings-actions .audio-settings-done{color:#e5efdd;border-color:#8dba9188;background:#24392c}
+.audio-settings-actions form{margin:0}
+@media(max-width:380px){.audio-settings-dialog{padding:29px 20px 21px}}

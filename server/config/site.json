@@ -1,0 +1,22 @@
+{
+  "siteName": "宗教非法人 ゆあ様（局域网版）",
+  "siteNameEn": "Yua-sama Pachinko (LAN)",
+  "version": "1.0.0",
+  "source": "https://yotogi-chan.itch.io/cryuasama",
+  "game": {
+    "id": "cryuasama",
+    "entry": "/index.html",
+    "editions": ["ja", "zh"],
+    "accessScheme": "none (open frontend, runtime i18n ja/zh switch)"
+  },
+  "progressPrefixes": ["yua-pachinko"],
+  "progressKeys": [
+    "yua-pachinko-trial-v1",
+    "yua-pachinko-trial-v1:backup:1",
+    "yua-pachinko-trial-v1:backup:2",
+    "yua-pachinko-debug-v1",
+    "yua-pachinko-render-quality-v1",
+    "yua-pachinko-lang-v1",
+    "yua-pachinko-lan-player"
+  ]
+}

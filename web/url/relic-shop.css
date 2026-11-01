@@ -1,0 +1,26 @@
+.relic-shop{width:min(94vw,620px);padding:0 18px 24px;background:radial-gradient(ellipse at 10% 0,#443341,#17131d 72%);border:1px solid #b69760;border-radius:16px;box-shadow:inset 0 0 0 4px #19151e,0 24px 100px #000c;color:#f5e8d8;max-height:90svh}
+.relic-shop .close{z-index:4;color:#efdcb8;text-shadow:0 1px 2px #000}
+.shop-welcome{position:relative;min-height:230px;margin:0 -18px 0;overflow:hidden;border-bottom:1px solid #cfa56277;background:linear-gradient(115deg,#f6eee6 0 44%,#382335 44.2%,#1e1623 100%);border-radius:15px 15px 0 0}
+.shop-welcome>img{position:absolute;left:0;top:0;width:47%;height:100%;object-fit:cover;object-position:50% 16%;mix-blend-mode:multiply}
+.shop-welcome>div{position:relative;margin-left:43%;padding:40px 8px 22px 10px}
+.shop-welcome small{font:10px Georgia,serif;letter-spacing:.12em;color:#c6a677}
+.shop-welcome h2{font-family:'Hiragino Mincho ProN','Yu Mincho',serif;font-size:clamp(18px,4.8vw,26px);line-height:1.45;margin:10px 0;color:#fff1d3}
+.shop-welcome p{font-size:11px;line-height:1.8;color:#cfbdcf;margin:0}
+.shop-wallet{display:flex;justify-content:flex-end;align-items:baseline;gap:8px;padding:17px 0 8px;font-size:12px;color:#c1adb5}
+.shop-wallet strong{font:34px Georgia,serif;color:#ffe7a5;font-variant-numeric:tabular-nums}
+.shop-rule{font-size:11px!important;margin:2px 0 16px;line-height:1.8!important;color:#b6a4b5!important}
+.shop-offers{display:grid;gap:12px}
+.shop-card{display:grid;grid-template-columns:65px minmax(0,1fr);gap:10px;padding:14px 12px;background:linear-gradient(115deg,#3e293a99,#1b1823);border:1px solid #ab8a5b70;border-radius:10px;box-shadow:inset 0 0 0 3px #1b162052}
+.shop-card>img{width:65px;height:65px;object-fit:contain;filter:drop-shadow(0 3px 5px #0009);align-self:center}
+.shop-card h3{margin:0 0 6px;font-family:'Hiragino Mincho ProN','Yu Mincho',serif;font-size:17px;color:#f9e0b1}
+.shop-card p{font-size:12px;margin:0 0 9px;line-height:1.6;color:#d2c4d2}
+.shop-card button{width:100%;padding:9px 5px;background:linear-gradient(135deg,#a37a3d,#664323);border:1px solid #e5ba78;color:#fff3d5;border-radius:5px;font-weight:700;font-size:13px}
+.shop-card small{display:block;font-size:10px;color:#a899a6;margin-top:6px;line-height:1.4}.shop-card[data-sold=true]{opacity:.55}
+.shop-reroll{display:flex;width:100%;justify-content:space-between;gap:8px;margin-top:17px;padding:13px 12px;border-radius:6px;background:#33243d;border:1px solid #8d669b;font-size:13px}.shop-reroll b{color:#efcbff}
+.shop-restock{font-size:10px!important;line-height:1.6!important;color:#a99caf!important}.shop-receipt{min-height:1.6em;font-size:12px!important;color:#ffb9b9!important}.shop-receipt[data-ok=true]{color:#b5efd0!important}
+.shop-growth{border-top:1px solid #aa865544;margin-top:16px;padding-top:14px;font-size:13px}.shop-growth summary{cursor:pointer;color:#e9c789}.shop-growth>div>div{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid #ffffff0b;padding:9px 0;font-size:11px}.shop-growth b{text-align:right;font-weight:500;color:#e1d7e7}.shop-growth span{color:#a89dae;flex-shrink:0}
+.side-destinations{display:flex;gap:8px;margin:8px 0 4px}.side-destinations button{flex:1;background:#1d1724;border:1px solid #8d775755;border-radius:6px;padding:10px 6px;color:#e7ce9c;font-size:11px}
+.growth-strip{font-size:10px;color:#dccb95;text-align:center;padding:6px 0;letter-spacing:.03em}
+.credit-panel{margin-top:20px;border-top:1px solid #5f4b6544;padding-top:16px}.credit-panel label{font-size:12px;color:#e3d8eb;display:block}.credit-input-row{display:flex;gap:7px;margin:10px 0}.credit-input-row input{width:0;min-width:0;flex:1;background:#080b11;color:#f7eee0;border:1px solid #6b586b;border-radius:5px;padding:10px;font-size:15px}.credit-input-row button{background:#314a3a;border:1px solid #87b191;border-radius:5px;padding:9px 12px;font-size:12px}.credit-panel p{font-size:11px!important;line-height:1.5!important}
+.operator-panel{margin-top:16px;padding:12px;background:#24212c;border:1px solid #6a5274;border-radius:6px}.operator-panel label{display:flex;justify-content:space-between;align-items:center;font-size:12px}.operator-panel select{padding:8px;background:#111019;color:#e7d9f2;border:1px solid #776284}.operator-panel p{font-size:10px;line-height:1.6}
+.session-notice{font-size:11px;color:#eac498;background:#302516;padding:8px;margin-top:5px;border-radius:4px}

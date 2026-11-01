@@ -1,0 +1,29 @@
+.hot-stage-effects{
+  position:fixed;inset:0;z-index:2147482000;overflow:hidden;
+  pointer-events:none!important;user-select:none;contain:layout paint;
+  color:#cc83ff;opacity:.2;
+}
+.hot-stage-effects[hidden],.hot-stage-effects [hidden]{display:none!important}
+.hot-stage-effects>*{position:absolute;display:block;pointer-events:none!important}
+.hot-stage-effects__lines{
+  inset:-5%;
+  background:repeating-conic-gradient(from 8deg at 50% 48%,transparent 0deg 8deg,currentColor 8.1deg 8.35deg,transparent 8.5deg 15deg);
+  -webkit-mask-image:radial-gradient(ellipse at 50% 48%,transparent 0 18%,#000 68%);
+  mask-image:radial-gradient(ellipse at 50% 48%,transparent 0 18%,#000 68%);
+  transform-origin:50% 48%;
+}
+.hot-stage-effects__wave{
+  left:50%;top:48%;width:65vmax;height:65vmax;
+  border:2px solid currentColor;border-radius:50%;
+  box-shadow:0 0 14px currentColor,inset 0 0 9px currentColor;
+  transform-origin:center;
+}
+.hot-stage-effects__edge{
+  inset:0;opacity:0;border:2px solid #fff;
+  box-shadow:inset 0 0 70px 12px #ffffffc9;
+}
+.hot-stage-effects[data-reduced=true] .hot-stage-effects__lines{transform:none}
+@media(prefers-reduced-motion:reduce){
+  .hot-stage-effects__wave,.hot-stage-effects__edge{display:none}
+  .hot-stage-effects__lines{transform:none!important}
+}

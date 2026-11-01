@@ -1,0 +1,50 @@
+.promise-red-development{position:absolute;inset:0;z-index:27;overflow:hidden;isolation:isolate;pointer-events:none;background:radial-gradient(ellipse at 50% 42%,#6c0e22,#17030e 70%,#060206)}
+.promise-red-development[hidden],.promise-red-development [hidden]{display:none!important}
+.promise-red-development__film{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.promise-red-development[data-baked=true]::before,.promise-red-development[data-baked=true]::after,.promise-red-development[data-baked=true]>:not(.promise-red-development__film){display:none!important}
+.promise-red-development::before{content:'';position:absolute;inset:-25%;background:repeating-conic-gradient(from 0deg at 50% 45%,#ff496025 0 2deg,transparent 3deg 18deg);animation:promise-red-turn 13s linear infinite}
+.promise-red-development__art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:drop-shadow(0 0 2.4cqw #ff3f53);animation:promise-red-arrive .7s both}
+.promise-red-development[data-stage=sword] .promise-red-development__art{scale:var(--promise-camera,1);filter:drop-shadow(0 0 calc(1cqw + var(--promise-charge,0)*5cqw) #ff637a)}
+.promise-red-development[data-stage=sword]::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 76% 25%,#fff9e9aa,transparent 35%);mix-blend-mode:screen;opacity:var(--promise-charge,0);pointer-events:none}
+.promise-red-development[data-stage=x2] .promise-red-development__art{inset:10% 6%;width:88%;height:80%;filter:drop-shadow(0 0 2.4cqw #ff644b)}
+.promise-red-development[data-stage=words-one],.promise-red-development[data-stage=words-two]{background:radial-gradient(ellipse at 50% 45%,#b11932,#410814 54%,#090207 85%)}
+.promise-red-development__word{position:absolute;z-index:3;display:block;object-fit:contain;filter:drop-shadow(0 0 1.4cqw #ff3955);animation:promise-red-word .35s both}
+.promise-red-development__word[data-word=prompt]{left:10%;top:45%;width:80%;height:17%}
+.promise-red-development__word[data-word=bind]{left:2%;top:4%;width:59%;height:45%}
+.promise-red-development__word[data-word=do]{left:61%;top:4%;width:37%;height:45%}
+.promise-red-development__word[data-word=power]{left:11%;top:46%;width:78%;height:51%}
+.promise-red-development__word[data-word=yua]{left:2%;top:14%;width:96%;height:72%;object-fit:fill}
+.promise-red-development[data-stage=sword],.promise-red-development[data-stage=beam],.promise-red-development[data-stage=resolve]{background:radial-gradient(ellipse at 50% 40%,#620d26,#140411 68%,#060206)}
+.promise-red-development[data-stage=beam] .promise-red-development__art{filter:drop-shadow(0 0 4cqw #fff) drop-shadow(0 0 7cqw #ff3047)}
+.promise-red-development[data-stage=resolve] .promise-red-development__art{opacity:.32;filter:drop-shadow(0 0 4cqw #ff3b54)}
+.promise-red-development__beam{position:absolute;z-index:2;inset:-20%;background:conic-gradient(from 10deg at 69% 35%,transparent 0deg,#fff8f0 4deg,#ff475f 8deg,transparent 17deg 55deg,#fff 58deg,#ff294f 62deg,transparent 70deg 360deg);mix-blend-mode:screen;opacity:.85;animation:promise-red-beam 1.4s ease-out infinite}
+.promise-red-development[data-stage=resolve] .promise-red-development__beam{opacity:.32}
+.lcd.layered-active[data-scene=promise][data-promise-beam=true]>.reels{visibility:visible!important;opacity:1!important;left:0;top:34%;width:100%;height:35%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;z-index:9;filter:drop-shadow(0 0 1.8cqw #ff3b58)}
+.lcd.layered-active[data-scene=promise][data-promise-beam=true]>.reels>.reel:first-child,.lcd.layered-active[data-scene=promise][data-promise-beam=true]>.reels>.reel:last-child{transform:scale(1.6);transform-origin:center;transition:transform .5s ease-out}
+.lcd.layered-active[data-scene=promise][data-promise-beam=true]>.reels>.reel:nth-child(2){opacity:0}
+@keyframes promise-red-arrive{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:scale(1)}}
+@keyframes promise-red-word{from{opacity:0;transform:scale(2.5);filter:blur(.7cqw)}to{opacity:1;transform:scale(1);filter:none}}
+@keyframes promise-red-beam{from{transform:scale(.2) rotate(-8deg);opacity:.1}45%{opacity:.85}to{transform:scale(1.5) rotate(8deg);opacity:0}}
+@keyframes promise-red-turn{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.promise-red-development::before,.promise-red-development__art,.promise-red-development__word,.promise-red-development__beam{animation:none}}
+.promise-announcement{position:absolute;inset:0;z-index:28;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 40%,#ffe8f5,#f8a4d3 42%,#cb438d 78%,#70164e);overflow:hidden;pointer-events:none}
+.promise-announcement[hidden]{display:none}
+.promise-announcement>img{width:91%;height:85%;object-fit:contain;filter:drop-shadow(0 0 2cqw #fff8);animation:promise-red-word .45s both}
+.lcd:has(.layered-scene[data-promise-announcement=true])>.reels,.lcd:has(.layered-scene[data-promise-announcement=true])>.reels *{visibility:hidden!important;opacity:0!important}
+@media(prefers-reduced-motion:reduce){.promise-announcement>img{animation:none}.promise-red-development[data-stage=sword] .promise-red-development__art{scale:1}}
+.standard-reach-title{position:absolute;left:20%;top:76%;width:60%;height:19%;object-fit:contain;z-index:8;pointer-events:none;filter:drop-shadow(0 0 1.2cqw #baff9a)}
+.standard-reach-title[hidden]{display:none}
+.lcd.phase-reach[data-reach-kind=standard]>.cue{visibility:hidden}
+/* v31: the scene clock drives the speed lines, lettering and sword camera. */
+.promise-announcement{background:radial-gradient(ellipse at 50% 46%,#fff0fa 0,#ff94d5 24%,#e32a8b 57%,#480b44 100%)}
+.promise-announcement::before,.promise-announcement::after{content:'';position:absolute;inset:-70%;pointer-events:none;transform-origin:50% 50%}
+.promise-announcement::before{background:repeating-conic-gradient(from 3deg,#fff9eddf 0 .65deg,transparent 1.1deg 6deg,#ff248baa 6.5deg 8deg,transparent 9deg 15deg);transform:rotate(var(--promise-intro-rays,0deg));mask-image:radial-gradient(ellipse,transparent 8%,#000 39%)}
+.promise-announcement::after{background:repeating-conic-gradient(from 11deg,transparent 0 8deg,#ffdcfdaa 9deg 10deg,transparent 11deg 20deg);transform:rotate(calc(var(--promise-intro-rays,0deg)*-1)) scale(var(--promise-intro-tunnel,1));mask-image:radial-gradient(ellipse,transparent 15%,#000 32%,transparent 67%);mix-blend-mode:screen}
+.promise-announcement>img{position:relative;z-index:2;width:87%;height:83%;animation:none;filter:drop-shadow(0 .8cqw .2cqw #570b44) drop-shadow(0 0 2cqw #fff8);will-change:transform}
+.promise-red-development::before{animation:none;opacity:.8;transform:rotate(var(--promise-ray-turn,0deg));background:repeating-conic-gradient(from 0deg at 50% 45%,#ff617366 0 1deg,transparent 2deg 10deg,#ffe6bd55 11deg 12deg,transparent 13deg 22deg)}
+.promise-red-development[data-stage=sword] .promise-red-development__art{animation:none;scale:1;transform-origin:50% 33%;will-change:transform;filter:drop-shadow(0 0 calc(.7cqw + var(--promise-charge,0)*2cqw) #ff637a)}
+.promise-red-development[data-stage=key] .promise-red-development__art{animation:none}
+.promise-red-development__slash{position:absolute;inset:-35%;z-index:2;mix-blend-mode:screen;opacity:.68;pointer-events:none;background:linear-gradient(148deg,transparent 44%,#ff315200 46%,#ff637daa 48%,#fff8ec 49.4%,#fff 50%,#ff3d69aa 51.8%,transparent 55%);transform:translate(calc(-45% + var(--promise-sweep,0)*90%),calc(27% - var(--promise-sweep,0)*54%));filter:drop-shadow(0 0 1cqw #ff355e)}
+.promise-red-development__flash{position:absolute;inset:0;z-index:4;background:radial-gradient(ellipse at 66% 29%,#fff,#ffe1bd 25%,#ff335c66 72%);mix-blend-mode:screen;opacity:var(--promise-flash,0);pointer-events:none}
+.promise-red-development[data-shot=gaze] .promise-red-development__slash,.promise-red-development[data-shot=vow] .promise-red-development__slash{opacity:.26}
+@media(prefers-reduced-motion:reduce){.promise-announcement::before,.promise-announcement::after{transform:none;opacity:.3}.promise-announcement>img,.promise-red-development[data-stage=sword] .promise-red-development__art{will-change:auto}.promise-red-development__slash,.promise-red-development__flash{display:none}}

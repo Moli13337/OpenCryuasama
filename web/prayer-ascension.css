@@ -1,0 +1,26 @@
+.prayer-ascension{position:absolute;inset:0;overflow:hidden;isolation:isolate;background:#422600;pointer-events:none}
+.prayer-ascension[hidden]{display:none}
+.prayer-ascension__sky{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;image-rendering:pixelated;filter:brightness(.7) saturate(1.3);will-change:transform}
+.prayer-ascension__rays{position:absolute;inset:-60%;background:repeating-conic-gradient(from 0deg at 50% 42%,transparent 0deg 14deg,#fff6a566 15deg 17deg,transparent 18deg 29deg);mix-blend-mode:screen;opacity:calc(.15 + var(--ascension-energy)*.35)}
+.prayer-ascension__ring{position:absolute;left:50%;top:40%;width:80%;aspect-ratio:1;border:2px solid #fff1b8;border-radius:50%;box-shadow:0 0 15px #ffd76d,inset 0 0 15px #fff0a9;will-change:transform,opacity}
+.prayer-ascension__yua{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;image-rendering:pixelated;transform-origin:50% 35%;filter:drop-shadow(0 0 8px #fff4cf) drop-shadow(0 5px 5px #21113d);will-change:transform,opacity}
+.prayer-ascension__particle{position:absolute;width:.9%;height:2%;background:#fffad5;box-shadow:0 0 6px #fff5ce;mix-blend-mode:screen}
+.prayer-ascension__particle.is-feather{width:2%;height:7%;border-radius:85% 10% 75% 10%;background:linear-gradient(100deg,#b9a6d3,#fff6d5 45%,#fff 50%,#eee0c8 55%);box-shadow:0 0 5px #ffeb94}
+.prayer-ascension__red{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 48%,transparent 20%,#830011bf 72%,#210013ef);opacity:var(--ascension-red);mix-blend-mode:multiply}
+.prayer-ascension__title{position:absolute;z-index:2;left:50%;top:70%;width:98%;height:auto;object-fit:contain;filter:drop-shadow(0 2px 2px #0b0011) drop-shadow(0 0 10px #ff342c);will-change:transform}
+.prayer-ascension__title[hidden]{display:none}
+.prayer-scene[data-ascension=true] video,.prayer-scene[data-ascension=true] [data-prayer-caption],.prayer-scene[data-ascension=true] .prayer-glow{visibility:hidden}
+.lcd:has(.prayer-scene[data-ascension=true]) .cue{visibility:hidden}
+.lcd:has(.prayer-scene[data-ascension=true]) .lcd-push{top:47%;z-index:10}
+.lcd:has(.prayer-scene[data-ascension=true]) .reels:before{background:radial-gradient(ellipse,#321734b0,transparent 76%)}
+
+/* Figures leave the character unobstructed, then return after the title fades. */
+.lcd.prayer-active[data-reel-focus=corner]>.reels{top:12%!important;left:66%!important;width:30%!important;height:13%!important;grid-template-columns:repeat(3,minmax(0,1fr));overflow:hidden;z-index:12;animation:none;transition:none}
+.lcd.prayer-active[data-reel-focus=corner]>.reels>.reel{position:relative;inset:auto;width:100%;height:100%;overflow:hidden;transform:none;filter:none}
+.lcd.prayer-active[data-long-reach=true]>.lcd-push{visibility:visible}
+
+/* The shared reel-size transition temporarily writes inline opacity!important.
+   Keep the intro title's mask independent of that fade and the center layout's
+   visible!important; the losing forecast deliberately reveals its figures. */
+.lcd.prayer-active:has(>.prayer-scene[data-intro=true]:not([data-fizzle-digits=true]))>.reels,
+.lcd.prayer-active:has(>.prayer-scene[data-intro=true]:not([data-fizzle-digits=true]))>.reels *{visibility:hidden!important}

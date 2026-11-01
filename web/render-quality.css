@@ -1,0 +1,122 @@
+.render-quality-settings{margin:18px 0;padding:16px 0;border-top:1px solid #cfc0a222;border-bottom:1px solid #cfc0a222}
+.render-quality-settings h3{margin:0 0 9px;font-size:15px;color:#eee3c9}
+.render-quality-toggle{display:flex;align-items:center;justify-content:space-between;gap:15px;font-size:12px;color:#e3dfe9;padding:6px 0}
+.render-quality-toggle input{width:22px;height:22px;accent-color:#a7d6ad;flex:none;cursor:pointer}
+.render-quality-settings p{margin:6px 0;font-size:10px;line-height:1.65;color:#b8afc0}
+.render-quality-settings .render-quality-reload-note{color:#bdb799}
+.render-quality-settings button{margin-top:7px;padding:10px 13px;border:1px solid #8dba9188;border-radius:6px;background:#24392c;color:#e5efdd;font-size:11px}
+.render-quality-settings button:disabled{opacity:.45;cursor:default}
+.render-quality-settings .render-quality-status{color:#e8cf9b;margin-bottom:0}
+.render-quality-status:empty{display:none}
+.audio-settings-dialog{max-height:90svh;overflow-y:auto;overscroll-behavior:contain}
+
+/* Optional extra savings. Timing, text, characters, hue and motion stay intact. */
+html[data-quality-preset="light"] .jackpot-pv__sparks::after,
+html[data-quality-preset="light"] .prayer-mote:nth-of-type(2n),
+html[data-quality-preset="light"] .prayer-feather:nth-of-type(2n),
+html[data-quality-preset="light"] .prayer-ascension__particle:nth-of-type(2n),
+html[data-quality-preset="light"] .tribute-intensity__spark:nth-of-type(2n){display:none!important}
+html[data-quality-preset="light"] :is(.prayer-feather,.bonus-presentation__halo,.hot-stage-effects__wave,.tribute-intensity__ring,.prayer-ascension__ring,.jackpot-pv__shockwave){filter:none!important;box-shadow:none!important}
+html[data-quality-preset="light"] .allure-glass-impact{filter:sepia(1) saturate(6) hue-rotate(282deg)}
+
+/* Low-load scenes keep the original media, lettering, camera and scene clock.
+   Use one layer of light instead of several overlapping masked surfaces. */
+html[data-render-quality][data-quality-preset="light"] :is(
+  .jackpot-pv__prism,.jackpot-pv__sparks,.jackpot-pv__shockwave,.jackpot-pv__ribbon,
+  .bonus-presentation__energy,.hot-stage-effects__lines,.hot-stage-effects__wave,
+  .awakening-cutin__premium-aura
+),
+html[data-render-quality][data-quality-preset="light"] .bonus-presentation__halo::before,
+html[data-render-quality][data-quality-preset="light"] .bonus-presentation__halo::after,
+html[data-render-quality][data-quality-preset="light"] .impact-titles::after,
+html[data-render-quality][data-quality-preset="light"] .special-fever-card::after {
+  display:none!important;
+}
+
+/* These are extra post-processing passes. Printed shading stays in each
+   image; the remaining colored rays and flashes still communicate heat. */
+html[data-render-quality][data-quality-preset="light"] :is(
+  .jackpot-pv__actor,.jackpot-pv__room,.bonus-presentation__actor,.bonus-presentation__room,
+  .bonus-presentation__round-intro,.prayer-ascension__sky,.prayer-ascension__particle,
+  .prayer-intro__yua,.prayer-intro__title,.layered-character,.layered-ornament,
+  .layered-title-art,.reach-development__art,.impact-titles__word,.impact-titles__art,
+  .result-presentation__yua,.result-presentation__continue,.diagonal-cutin__text,
+  .special-fever-card,.reward-meter,.bonus-guarantee,.right-aim
+) { filter:none!important; }
+html[data-render-quality][data-quality-preset="light"] :is(
+  .lcd.board-monitor-wide,.bonus-presentation__halo,.prayer-ascension__particle,
+  .result-presentation__star,.layered-tint,.reward-ring,.prayer-glow,
+  .diagonal-cutin__band,.result-presentation__panel
+),
+html[data-render-quality][data-quality-preset="light"] .result-presentation__star::after {
+  box-shadow:none!important;
+}
+
+/* Bound decorative backgrounds to their monitor. Only decoration loses its
+   mask/blend pass; character fades, image framing and video remain intact. */
+html[data-render-quality][data-quality-preset="light"] :is(
+  .jackpot-pv__aurora,.jackpot-pv__rays,.jackpot-pv__sweep,
+  .bonus-presentation__rays,.bonus-presentation__sweep,.result-presentation__rainbow,
+  .prayer-ascension__rays,.reach-development__rays,.reward-burst,
+  .awakening-cutin__rays,.diagonal-cutin__burst
+) { inset:0!important;mask-image:none!important;-webkit-mask-image:none!important;mix-blend-mode:normal!important; }
+html[data-render-quality][data-quality-preset="light"] :is(
+  .layered-background,.prayer-ascension__red,.diagonal-cutin__flash,
+  .shutter-seam
+) { mix-blend-mode:normal!important; }
+
+/* The prayer still has falling light/feathers, with at most a quarter of the
+   individually moving pieces. The portrait, title and PUSH are unaffected. */
+html[data-render-quality][data-quality-preset="light"] .prayer-ascension__particle:not(:nth-of-type(4n+1)),
+html[data-render-quality][data-quality-preset="light"] .prayer-mote:not(:nth-of-type(4n+1)),
+html[data-render-quality][data-quality-preset="light"] .prayer-feather:not(:nth-of-type(4n+1)) { display:none!important; }
+
+/* SVG lamps have a sharp core plus a second wide glow copy. Preserve every
+   sharp core while dropping the redundant, widely blurred lamp geometry. */
+html[data-render-quality][data-quality-preset="light"] #cabinet-parts .glow { display:none!important; }
+
+/* A steady normal-play ring avoids two permanently moving large layers. */
+html[data-quality-preset="light"] #screen>.aura-one{animation:none;box-shadow:none;opacity:.5}
+html[data-quality-preset="light"] #screen>.aura-two{display:none}
+/* These normal decorations are fully covered; their animations should stop. */
+.lcd.layered-active>.portrait,.lcd.layered-active>.aura,
+.lcd.pv-active>.portrait,.lcd.pv-active>.aura,
+.lcd.bonus-active>.portrait,.lcd.bonus-active>.aura,
+.lcd.prayer-active:not(:has(.prayer-scene[data-fizzle-reveal=true]))>.portrait,
+.lcd.prayer-active:not(:has(.prayer-scene[data-fizzle-reveal=true]))>.aura{animation-play-state:paused}
+
+/* Optional low-load cabinet: the four original painted pieces remain. The
+   eleven SVG recolor masks forced a cabinet-sized blend surface every lamp
+   tick. Keep the existing sharp lamp cores, physical PUSH feedback and scene
+   flashes; omit only the recolor overlay on these already painted pieces. */
+html[data-quality-preset="light"] #cabinet-parts .skin-light{display:none!important}
+
+/* brightness(1) is visually neutral but promotes a second filtered surface
+   for each canvas. Active heartbeat pulses still use the original filter. */
+html[data-quality-preset="light"] .lcd:is(:not([data-heartbeat-time]),[data-heartbeat-time=""]) .reels .symbol-art{filter:none!important}
+
+/* Legacy bonus rays sit behind the modern opaque PV/round presentations.
+   Remove that covered surface; bound the visible fallback rays to the LCD. */
+html[data-quality-preset="light"] .lcd>.bonus-rays{inset:0!important;mix-blend-mode:normal!important}
+html[data-quality-preset="light"] .lcd:not(.phase-win)>.bonus-rays,
+html[data-quality-preset="light"] .lcd:is(.pv-active,.bonus-active)>.bonus-rays{display:none!important}
+
+/* Reuse the six narrow outer lamp paths. No image, filter, mask, blend layer,
+   animation timer or additional canvas; the scene clock owns color/opacity. */
+html[data-quality-preset="light"] #cabinet-parts.has-skin>svg>.zone-frame.core{
+  display:initial;stroke-width:12;stroke-linecap:round;pointer-events:none;
+}
+
+/* Light-only v55: retain the moving announcement and its pink field, with
+   one bounded ray layer instead of two masked 240%-size surfaces. */
+html[data-quality-preset="light"] .promise-announcement::before{
+  inset:-10%;mask-image:none;-webkit-mask-image:none;opacity:.55;
+}
+html[data-quality-preset="light"] .promise-announcement::after{display:none}
+/* The PUSH white frame already comes from scene-flash. A 70px fullscreen
+   inset blur here otherwise adds another large surface on that same frame. */
+html[data-quality-preset="light"] .hot-stage-effects__edge{box-shadow:none}
+/* Art already contains its shading; these large blur passes are redundant. */
+html[data-quality-preset="light"] :is(
+  .prayer-ascension__yua,.prayer-ascension__title,.promise-announcement>img
+){filter:none!important}

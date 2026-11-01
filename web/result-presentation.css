@@ -1,0 +1,48 @@
+/* Result lettering is static: the presentation clock still owns every transition. */
+.result-presentation{position:absolute;inset:0;z-index:15;overflow:hidden;contain:layout paint;isolation:isolate;container-type:inline-size;pointer-events:none;background:radial-gradient(ellipse at 50% 22%,#49344599,transparent 48%),radial-gradient(ellipse at 50% 80%,#6e471d40,transparent 48%),linear-gradient(135deg,#17111c,#08080e 58%,#20171b);color:#f8e4b9}
+.result-presentation[hidden],.result-presentation [hidden]{display:none!important}
+.result-presentation__panel{position:absolute;inset:6% 5%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-sizing:border-box;border:1px solid #e1c57b85;box-shadow:inset 0 0 0 1px #140c04,inset 0 0 0 5px #80603626,inset 0 0 14cqw #09060bb3,0 0 0 1px #07070b;padding:6% 3%;background:linear-gradient(120deg,#ecc88407,transparent 40%,#dabb6b0b);border-radius:1cqw}
+.result-presentation__panel:before,.result-presentation__panel:after{content:'';position:absolute;left:3%;right:3%;height:4.4%;pointer-events:none;border-color:#c9a45c;border-style:solid;opacity:.8}
+.result-presentation__panel:before{top:2%;border-width:2px 2px 0;clip-path:polygon(0 0,100% 0,100% 100%,96% 100%,96% 20%,4% 20%,4% 100%,0 100%)}
+.result-presentation__panel:after{bottom:2%;border-width:0 2px 2px;clip-path:polygon(0 0,4% 0,4% 80%,96% 80%,96% 0,100% 0,100% 100%,0 100%)}
+.result-presentation__mode{font:800 3.9cqw/1.3 'Hiragino Mincho ProN','Yu Mincho',serif;letter-spacing:.24em;color:#ddc6a2;margin:0 0 3%;text-shadow:0 1px #000}
+.result-presentation__metal{position:relative;display:inline-block;color:#b68940;-webkit-text-stroke:.065em #291307;paint-order:stroke fill;text-shadow:0 .055em 0 #160b08,0 .09em 0 #020205,0 .14em .1em #000b}
+.result-presentation__metal:after{content:attr(data-face);position:absolute;inset:0;white-space:inherit;color:transparent;-webkit-text-stroke:.008em #fff2b98a;paint-order:stroke fill;background:linear-gradient(180deg,#fffdf0 0%,#ffe7a2 18%,#a86a22 42%,#6e3a0d 48%,#fff3bd 51%,#edc66d 65%,#a66e28 85%,#fff0ad 100%);background-clip:text;-webkit-background-clip:text;text-shadow:none;pointer-events:none}
+.result-presentation__heading{font:900 9.2cqw/1.3 'Hiragino Mincho ProN','Yu Mincho',serif;letter-spacing:.11em;margin:0 0 6%;white-space:nowrap;transform:skewX(-4deg)}
+.result-presentation__count{display:flex;align-items:baseline;justify-content:center;max-width:100%;line-height:1;white-space:nowrap;margin:0 0 5%;gap:1.4cqw}
+.result-presentation__count strong{font:900 25cqw/.98 Georgia,'Times New Roman',serif;font-variant-numeric:lining-nums tabular-nums;letter-spacing:-.035em}
+.result-presentation__count strong:after{background-image:linear-gradient(180deg,#fff 2%,#e9e3d3 30%,#8c8581 47%,#fffefa 52%,#d7c7a5 78%,#fff7dd 100%);-webkit-text-stroke:.008em #fff7e2b0}
+.result-presentation__count span{font:900 7.2cqw/1 'Hiragino Mincho ProN','Yu Mincho',serif;color:#e6d2ab;text-shadow:0 2px #130a06}
+.result-presentation__label{display:flex;align-items:center;gap:3cqw;width:88%;justify-content:center;font:800 4.4cqw/1.3 'Hiragino Mincho ProN','Yu Mincho',serif;letter-spacing:.24em;color:#e4c88a;margin:0 0 3%}
+.result-presentation__label:before,.result-presentation__label:after{content:'';height:1px;flex:1;background:linear-gradient(90deg,transparent,#b99352)}
+.result-presentation__label:after{transform:scaleX(-1)}
+.result-presentation__payout{display:flex;align-items:baseline;justify-content:center;max-width:100%;gap:1.4cqw;white-space:nowrap;margin:0;line-height:1.15}
+.result-presentation__payout strong{font:900 21cqw/1.15 Georgia,'Times New Roman',serif;letter-spacing:-.04em;font-variant-numeric:lining-nums tabular-nums}
+.result-presentation__payout span{font:900 5cqw/1 'Hiragino Mincho ProN','Yu Mincho',serif;color:#ebd196;text-shadow:0 2px #1e0d02}
+.result-presentation__end{display:flex;align-items:center;justify-content:center;gap:3cqw;color:#c39b55;font-size:2.3cqw;line-height:1;margin-top:7%;width:66%;text-shadow:0 0 1cqw #fbd27d66}
+.result-presentation__end:before,.result-presentation__end:after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,#ba914c)}
+.result-presentation__end:after{transform:scaleX(-1)}
+@supports not ((background-clip:text) or (-webkit-background-clip:text)){.result-presentation__metal:after{display:none}.result-presentation__metal{color:#f6db92}}
+.result-presentation__star{position:absolute;left:15%;top:38%;width:72%;height:.6%;z-index:3;border-radius:50%;background:linear-gradient(90deg,transparent,#ce9dff 62%,#fff8e5 96%);box-shadow:0 0 3cqw #ccadff;transform-origin:90% 50%;opacity:0}
+.result-presentation__star:after{content:'';position:absolute;right:-2%;top:50%;width:7%;aspect-ratio:1;background:#fffbed;border-radius:50%;box-shadow:0 0 2cqw white,0 0 5cqw #e4bdff;transform:translateY(-50%)}
+.result-presentation__flash{position:absolute;inset:0;z-index:4;opacity:0;background:radial-gradient(ellipse at 64% 25%,#fff8ff,#d49bd8aa,transparent 70%)}
+.result-presentation__yua{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 28%;z-index:2;opacity:0;transform-origin:50% 23%}
+.result-presentation__dialogue{position:absolute;left:3%;right:3%;bottom:6%;z-index:5;padding:16% 1% 3%;text-align:center;background:linear-gradient(transparent,#210924c9 40%,#170721dc);font:900 8cqw/1.25 'Hiragino Mincho ProN','Yu Mincho',serif;color:#fff0eb;text-shadow:0 2px #4e093b,2px 0 #4e093b,-2px 0 #4e093b,0 -2px #4e093b,0 0 3cqw #e17bbc;opacity:0}
+.result-presentation[data-state=revive][data-step=dialogue] .result-presentation__dialogue{opacity:1}
+.result-presentation__line{display:block;white-space:nowrap}.result-presentation__line:last-child{color:#ffdde9;font-size:10cqw}
+.result-presentation[data-reduced=true] .result-presentation__star{box-shadow:none}
+
+/* Revival keeps the small result/star first; the caller widens the monitor at 1.6s. */
+.result-presentation__rainbow{position:absolute;inset:-40%;z-index:1;opacity:0;pointer-events:none;background:repeating-conic-gradient(from 10deg,transparent 0deg 14deg,#ff477d45 15deg 23deg,transparent 24deg 35deg,#ffd25655 36deg 44deg,transparent 45deg 57deg,#72f8c64d 58deg 67deg,transparent 68deg 78deg,#ab87ff59 79deg 88deg);mask-image:radial-gradient(ellipse,transparent 18%,#000 50%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse,transparent 18%,#000 50%,transparent 75%)}
+.result-presentation[data-wide=true]{background:radial-gradient(ellipse at 48% 40%,#a1507136,#130d1e 65%,#09070f)}
+.result-presentation[data-wide=true] .result-presentation__yua{top:8%;height:77%;object-position:center top;mask-image:linear-gradient(#000 0 88%,transparent 100%);-webkit-mask-image:linear-gradient(#000 0 88%,transparent 100%);filter:brightness(1.15) drop-shadow(0 0 4cqw #e29be459)}
+.result-presentation[data-wide=true] .result-presentation__rainbow{z-index:3;mix-blend-mode:screen}
+.result-presentation__continue{position:absolute;top:3%;left:14%;width:72%;height:27%;z-index:6;display:grid;place-items:center;opacity:0;pointer-events:none;filter:drop-shadow(0 2px 2px #100518) drop-shadow(0 0 2cqw #eabbfa66)}
+.result-presentation__continue img{display:block;width:100%;height:100%;object-fit:contain}
+.result-presentation__continue strong{font:900 21cqw/1 'Hiragino Mincho ProN','Yu Mincho',serif;letter-spacing:.12em;color:#fff;background:linear-gradient(135deg,#fff7a8,#ff8bba 25%,#be9eff 45%,#91edff 65%,#a7ffc1 80%,#fff7ba);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;-webkit-text-stroke:.2cqw #fff3cf;paint-order:stroke fill;text-shadow:0 .04em #40234555}
+.result-presentation[data-wide=true] .result-presentation__dialogue{font-size:8cqw;bottom:3%}
+.result-presentation[data-wide=true] .result-presentation__line:last-child{font-size:9cqw}
+
+/* Result-time arrivals remain visible even during the wide revival. */
+#screen.lcd.result-active>#holds{visibility:visible;z-index:20;bottom:2.5%}
+#screen.lcd.result-active>#holds:before{content:'通常保留';position:absolute;bottom:calc(100% + .4cqw);color:#e6d7ad;font:600 2.7cqw/1.2 sans-serif;letter-spacing:.14em;text-shadow:0 1px 2px #000}

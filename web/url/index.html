@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ja" data-startup="loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#090b10">
+  <title>宗教非法人 ゆあ様｜パチンコ</title>
+  <link rel="icon" href="data:,">
+  <style>
+    html[data-startup]:not([data-startup="ready"]) .game-shell{visibility:hidden}
+    html[data-startup]:not([data-startup="ready"]) body{overflow:hidden}
+    #startup-loader{position:fixed;inset:0;z-index:2147483647;display:grid;place-items:center;overflow:hidden;padding:28px;box-sizing:border-box;background:radial-gradient(ellipse at 30% 25%,#24463766,transparent 57%),radial-gradient(ellipse at 80% 75%,#49255466,transparent 55%),#090c11;color:#eee6d0;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN",sans-serif;isolation:isolate}
+    #startup-loader[hidden]{display:none!important}
+    .startup-panel{width:min(100%,340px);text-align:center;position:relative}
+    .startup-orbit{width:94px;height:94px;margin:0 auto 28px;position:relative;border:1px solid #dfc88f44;border-radius:50%;box-shadow:0 0 42px #80f5bf12,inset 0 0 25px #94ffbf12}
+    .startup-orbit:before,.startup-orbit:after{content:"";position:absolute;inset:8px;border:1px solid transparent;border-top-color:#b2f4c9;border-bottom-color:#ae86cc;border-radius:50%;animation:startup-orbit 4s linear infinite}
+    .startup-orbit:after{inset:20px;animation-direction:reverse;animation-duration:6s;border-top-color:#e4d298;border-bottom-color:transparent}
+    .startup-orbit i{position:absolute;inset:40px;background:#e7d9b8;transform:rotate(45deg);box-shadow:0 0 17px #c1ffcc}
+    .startup-kicker{font-size:10px;letter-spacing:.3em;color:#b7aa86;margin:0 0 12px}
+    #startup-title{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(30px,8vw,42px);font-weight:600;letter-spacing:.22em;margin:0 0 32px;padding-left:.22em;color:#f4e7c1}
+    .startup-meter{height:4px;width:100%;border-radius:4px;overflow:hidden;background:#c7b5801c;box-shadow:0 0 0 1px #ccbd8f22}
+    #startup-fill{display:block;height:100%;width:0;background:linear-gradient(90deg,#67bc8d,#d3df9c,#d4acd9);box-shadow:0 0 18px #a0efb8;transition:width .22s ease}
+    .startup-meta{display:flex;justify-content:space-between;align-items:center;margin-top:13px;color:#bdb4c5;font-size:10px;letter-spacing:.13em}
+    #startup-percent{color:#e8d8ad;font-size:13px;font-variant-numeric:tabular-nums}
+    #startup-status{font-size:13px;line-height:1.9;margin:24px 0 6px;min-height:25px;letter-spacing:.05em}
+    .startup-note{font-size:11px;color:#97929e;line-height:1.9;margin:0 0 23px}
+    #startup-retry{color:#c9bea8;background:transparent;border:1px solid #a99c6944;padding:9px 16px;border-radius:5px;font-size:11px;cursor:pointer}
+    #startup-retry:focus-visible{outline:2px solid #b4ebc9;outline-offset:4px}
+    #startup-loader[data-state="error"] .startup-orbit:before,#startup-loader[data-state="error"] .startup-orbit:after{animation-play-state:paused}
+    @keyframes startup-orbit{to{transform:rotate(360deg)}}
+    @media(prefers-reduced-motion:reduce){.startup-orbit:before,.startup-orbit:after{animation:none}#startup-fill{transition:none}}
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="layered-reach.css">
+  <link rel="stylesheet" href="reach-development.css">
+  <link rel="stylesheet" href="allure-development.css">
+  <link rel="stylesheet" href="tribute-development.css">
+  <link rel="stylesheet" href="promise-red-development.css">
+  <link rel="stylesheet" href="judgment-confirmation.css">
+  <link rel="stylesheet" href="reel-transition.css">
+  <link rel="stylesheet" href="number-focus-cutin.css">
+  <link rel="stylesheet" href="scene-flash.css"><link rel="stylesheet" href="hot-stage-effects.css"><link rel="stylesheet" href="hold-jewels.css"><link rel="stylesheet" href="bonus-impact-v16.css">
+  <link rel="stylesheet" href="impact-titles.css">
+  <link rel="stylesheet" href="jackpot-pv.css">
+  <link rel="stylesheet" href="bonus-presentation.css">
+  <link rel="stylesheet" href="relic-shop.css">
+  <link rel="stylesheet" href="operator-stock.css">
+  <link rel="stylesheet" href="support-panel.css">
+  <link rel="stylesheet" href="rewarded-ad.css">
+  <link rel="stylesheet" href="audio-settings.css">
+  <link rel="stylesheet" href="render-quality.css">
+  <link rel="stylesheet" href="debug-mode.css">
+  <link rel="stylesheet" href="reward-gallery.css">
+  <link rel="stylesheet" href="awakening-cutin.css">
+  <link rel="stylesheet" href="result-presentation.css">
+  <link rel="stylesheet" href="draw-presentation.css">
+<link rel="stylesheet" href="miss-presentation.css">
+  <link rel="stylesheet" href="music-credits.css">
+  <link rel="stylesheet" href="mobile-rendering.css">
+  <link rel="stylesheet" href="session-transfer.css">
+</head>
+<body>
+  <section id="startup-loader" role="region" aria-labelledby="startup-title" data-state="loading">
+    <div class="startup-panel">
+      <div class="startup-orbit" aria-hidden="true"><i></i></div>
+      <p class="startup-kicker">宗教非法人</p><h1 id="startup-title">ゆあ様</h1>
+      <div id="startup-progress" class="startup-meter" role="progressbar" aria-label="遊技の準備" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="startup-fill"></i></div>
+      <div class="startup-meta"><span>NOW LOADING</span><b id="startup-percent">0%</b></div>
+      <p id="startup-status" role="status" aria-live="polite">遊技の準備をしています</p>
+      <p class="startup-note">初回は素材の読み込みに少し時間がかかります。</p>
+      <button id="startup-retry" type="button" onclick="location.reload()">読み込み直す</button>
+      <noscript><p>このゲームを遊ぶにはJavaScriptを有効にしてください。</p></noscript>
+    </div>
+  </section>
+  <main class="game-shell" inert aria-busy="true">
+    <header class="topbar">
+      <span class="edition" hidden data-operator-only><i></i> 運営設定 <b>12</b></span>
+      <div class="top-actions">
+        <button id="sound" class="quiet" aria-pressed="false">音 OFF</button>
+        <button id="volume-open" class="quiet" aria-haspopup="dialog" aria-controls="audio-settings-dialog">設定</button>
+        <button id="settings-open" class="quiet" hidden data-operator-only>運営設定</button>
+        <button id="help-open" class="quiet" aria-label="遊び方">?</button>
+      </div>
+    </header>
+    <p class="debug-banner" data-debug-only hidden>デバッグモード · 通常プレイとは別のセーブを使用</p>
+    <section class="meters" aria-label="遊技情報">
+      <div><span>持ち玉</span><strong id="stock">500</strong></div>
+      <div><span>回転</span><strong id="spins">0</strong></div>
+      <div><span>大当り</span><strong id="wins">0</strong></div>
+      <div class="mode-meter"><span id="mode">通常</span><strong id="rush-count">—</strong></div>
+    </section>
+    <div class="machine-wrap">
+      <section id="machine" class="machine" aria-label="ゆあ様パチンコ盤面">
+        <div id="cabinet-parts" class="cabinet native-cabinet"></div>
+        <canvas id="board" width="1024" height="1536" aria-label="発射した玉が釘に当たり、入賞口へ向かう盤面"></canvas>
+        <section id="screen" class="lcd phase-idle" aria-label="液晶演出">
+          <div class="lcd-space"></div><div class="aura aura-one"></div><div class="aura aura-two"></div>
+          <img class="portrait" data-boot-src="assets/yua.png" alt="ゆあ様" draggable="false">
+          <div class="lcd-vignette"></div><div class="scanlines"></div>
+          <div id="prayer-scene" class="prayer-scene" hidden aria-label="お祈りリーチ"><video muted playsinline preload="none" data-poster="assets/reaches/prayer-poster-v01.png" data-src="assets/reaches/prayer-original-v01.mp4" aria-hidden="true"></video><div class="prayer-glow" aria-hidden="true"></div><p data-prayer-caption>ゆあ様へ、祈りを。</p></div>
+          <div id="layered-scene" class="layered-scene" hidden>
+            <img decoding="async" loading="lazy" class="layered-temple" data-layer-asset="temple" data-layer-src="assets/reaches/layered-v01/temple-background-v01.webp" alt="">
+            <video class="layered-background" muted playsinline loop preload="metadata" aria-hidden="true"></video>
+            <img decoding="async" loading="lazy" class="layered-character" data-character alt="ゆあ様" hidden>
+            <img decoding="async" loading="lazy" class="layered-character eye-lids" data-eye-lids data-layer-asset="eyelids" data-layer-src="assets/reaches/layered-v01/eye-closed-v01.webp" alt="" hidden>
+            <div class="layered-tint"></div>
+            <div class="spam-windows" aria-hidden="true"><img decoding="async" loading="lazy" data-layer-asset="spam" data-layer-src="assets/reaches/layered-v01/spam-warning-v01.gif" alt=""><img decoding="async" loading="lazy" data-layer-asset="spam" data-layer-src="assets/reaches/layered-v01/spam-reason-v01.gif" alt=""><img decoding="async" loading="lazy" data-layer-asset="spam" data-layer-src="assets/reaches/layered-v01/spam-winner-v01.gif" alt=""></div>
+            <img decoding="async" loading="lazy" class="layered-ornament" data-layer-asset="ornament" data-layer-src="assets/reaches/layered-v01/rpg-ornament-v01.webp" alt="">
+            <p class="layered-caption" data-layer-caption></p>
+            <img decoding="async" loading="lazy" class="layered-title-art" data-title-art alt="" hidden>
+            <div data-layer-shutter class="draw-shutter" hidden aria-hidden="true"><b>まだ、終わらない。</b></div>
+            <div data-impact hidden></div>
+          </div>
+          <div id="judgment-confirmation" class="judgment-confirmation" hidden aria-label="負けたいッ！！ 大当たり確定"><img decoding="async" loading="lazy" data-managed-src="assets/reaches/layered-v01/judgment-surrender-v01.webp" alt="負けたいッ！！"></div>
+          <div id="screen-mode" class="screen-mode" hidden></div>
+          <div id="demo-tag" class="demo-tag" hidden>演出体験</div>
+          <div id="cue" class="cue"></div>
+          <div class="reels" aria-label="図柄"></div>
+          <div id="draw-shutter" class="draw-shutter" hidden aria-hidden="true"><i class="shutter-seam"></i><b>変われ……</b></div>
+          <div id="st-counter" class="st-counter" hidden><img decoding="async" loading="lazy" data-managed-src="assets/reaches/layered-v01/st-title-v01.webp" alt="スーパー調教タイム"><small>ST 残り</small><strong>0</strong><small>回 ＋ 保留</small></div>
+          <div id="reward-meter" class="reward-meter" hidden><span>獲得</span><b>0</b><span>玉</span><small></small></div>
+          <div id="bonus-guarantee" class="bonus-guarantee" hidden><img decoding="async" loading="lazy" data-bonus-3000 data-managed-src="assets/reaches/layered-v01/reward-3000-v01.webp" alt="3000発"><b data-bonus-10000 hidden>10000発</b><img decoding="async" loading="lazy" class="guarantee-confirmed" data-managed-src="assets/reaches/layered-v01/reward-confirmed-v01.webp" alt="確定"></div>
+          <div id="outcome" class="outcome"></div><div id="round-status" class="round-status" hidden></div><div class="bonus-rays" aria-hidden="true"></div>
+          <button id="lcd-push" class="lcd-push" hidden>PUSH</button>
+          <img decoding="async" loading="lazy" id="standard-reach-title" class="standard-reach-title" data-managed-src="assets/reaches/layered-v01/standard-reach-title-v01.png" alt="リーチ" hidden>
+          <div class="holds" id="holds" aria-label="保留0個"><i></i><i></i><i></i><i></i></div>
+          <div class="win-flash"></div>
+          <div id="jackpot-pv" hidden></div>
+          <div id="bonus-presentation" hidden></div>
+          <div id="result-scene" hidden></div>
+          <div id="win-reward" class="win-reward" hidden aria-hidden="true"><img decoding="async" loading="lazy" class="promotion-art" data-managed-src="assets/reaches/layered-v01/promotion-charge-v01.webp" alt=""><div class="reward-burst"></div><div class="reward-ring"></div><div data-reward-title hidden></div></div>
+        <div id="right-aim" class="right-aim" hidden aria-label="右下の入口を狙え"><img decoding="async" loading="lazy" data-managed-src="assets/reaches/layered-v01/aim-title-v01.webp" alt="狙え！"><svg viewBox="0 0 70 90" aria-hidden="true"><path d="M18 3H43V40H64L35 84 6 40H18Z" fill="#ffd06a" stroke="#fff5cf" stroke-width="3"/><path d="M23 12H38V48H51L35 71 19 48H23Z" fill="#e85a6e"/></svg></div>
+        </section>
+        <button id="physical-push" class="physical-push" aria-label="演出のPUSHボタン"><span class="sr-only">PUSH</span></button>
+        <button id="handle" class="handle" aria-label="長押しで発射。上へドラッグで強く、下へドラッグで弱く" aria-describedby="handle-hint"><span class="handle-notch" aria-hidden="true"></span><span class="handle-readout" aria-hidden="true"><b id="handle-power">50</b><small>↑ 強　弱 ↓</small></span><span class="sr-only">発射ハンドル</span></button>
+        <div id="intro" class="intro">右下のハンドルを長押し<span>上へドラッグで強く、下へドラッグで弱く</span></div>
+      </section>
+    </div>
+    <div id="session-notice" class="session-notice" hidden></div>
+    <section class="controls" aria-label="操作">
+      <div id="play-guide" class="play-guide" data-direction="left"><strong id="aim-direction">← 左打ち</strong><span id="aim-target">へそを狙って抽選</span><button id="aim-switch">左打ちにする</button></div>
+      <p id="handle-hint" class="handle-hint">右下ハンドルを長押し・上下ドラッグで強さ調整</p>
+      <div class="fire-row">
+        <button id="fire" class="fire" aria-pressed="false"><span class="fire-icon">◉</span><span id="fire-label">打ち出す</span></button>
+        <label class="power"><span>打ち出す強さ <b id="power-value">50・中</b></span><input id="power" type="range" min="0" max="100" value="50" aria-label="打ち出す強さ"></label>
+      </div>
+      <div class="sub-controls"><span id="message" role="status" aria-live="polite">まずは、玉を打ってみてください。</span><button id="demo" class="demo" hidden data-operator-only>演出を試す <span>›</span></button></div>
+    </section>
+    <div class="side-destinations"><button id="shop-open">となりちゃんのお店</button><button id="rewards-open" hidden>ゆあ様のご褒美</button><button id="credits-open">玉を補充</button><button id="support-open">お貢ぎ</button></div>
+    <button id="rewarded-ad-open" type="button" hidden>広告を見て500玉</button>
+    <div id="growth-strip" class="growth-strip" hidden></div>
+    <details class="debug-monitor" data-debug-only hidden open><summary>現在の演出・表示素材</summary><output id="debug-monitor-state">準備中</output></details>
+    <button id="pv-continue" class="pv-continue" hidden>PVを終えてRUSHへ</button>
+    <p id="music-credit" class="music-credit" hidden>楽曲制作：<a href="https://www.d-elf.com/" target="_blank" rel="noopener">D’elf / d-elf.com</a><span data-track-name hidden></span></p>
+    <audio id="music-bed" preload="none" loop></audio>
+    
+  </main>
+  <dialog id="audio-settings-dialog" class="audio-settings-dialog" aria-labelledby="audio-settings-title">
+    <form method="dialog"><button class="close" aria-label="音量設定を閉じる">×</button></form>
+    <span class="dialog-kicker">PLAY SETTINGS</span><h2 id="audio-settings-title">プレイ設定</h2>
+    <p class="audio-settings-intro">音量を調整できます。</p>
+    <div class="audio-settings-controls">
+      <label class="audio-setting audio-setting-master" for="audio-master"><span>全体の音量</span><output data-volume-output="master" for="audio-master">80%</output><input id="audio-master" data-volume="master" type="range" min="0" max="100" step="1" value="80"></label>
+      <label class="audio-setting" for="audio-music"><span>音楽</span><output data-volume-output="music" for="audio-music">70%</output><input id="audio-music" data-volume="music" type="range" min="0" max="100" step="1" value="70"></label>
+      <label class="audio-setting" for="audio-effects"><span>効果音</span><output data-volume-output="effects" for="audio-effects">75%</output><input id="audio-effects" data-volume="effects" type="range" min="0" max="100" step="1" value="75"></label>
+      <label class="audio-setting" for="audio-voice"><span>ボイス</span><output data-volume-output="voice" for="audio-voice">90%</output><input id="audio-voice" data-volume="voice" type="range" min="0" max="100" step="1" value="90"></label>
+    </div>
+    <p class="audio-settings-note">音のON／OFFは、画面上の「音」ボタンで切り替えられます。</p>
+    <p class="audio-settings-storage" data-audio-storage role="status" hidden>このブラウザでは設定を保存できません。開いている間は反映されます。</p>
+    <div class="audio-settings-actions"><button type="button" data-audio-reset>初期値に戻す</button><form method="dialog"><button class="audio-settings-done">遊技に戻る</button></form></div>
+  </dialog>
+  <dialog id="rewarded-ad" class="rewarded-ad" aria-labelledby="rewarded-ad-title">
+    <button type="button" class="close" data-ad-close aria-label="広告を閉じる">×</button>
+    <p class="rewarded-ad__label">作品のご紹介 · 広告を見て500玉</p>
+    <div class="rewarded-ad__visual"><img loading="lazy" data-ad-image alt="" decoding="async" draggable="false"></div>
+    <p class="rewarded-ad__kicker" data-ad-kicker></p>
+    <h2 id="rewarded-ad-title" data-ad-title></h2>
+    <p class="rewarded-ad__description" data-ad-description></p>
+    <a class="rewarded-ad__link" data-ad-link href="https://note.com/yotogichan" target="_blank" rel="noopener noreferrer">作品の案内をnoteで見る ↗</a>
+    <div class="rewarded-ad__meter" data-ad-progress role="progressbar" aria-label="広告の表示時間" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+    <p class="rewarded-ad__status" data-ad-status role="status" aria-live="polite"></p>
+    <button class="rewarded-ad__claim" type="button" data-ad-claim disabled>500玉を受け取る</button>
+    <p class="rewarded-ad__note">リンクを開かなくても受け取れます。</p>
+  </dialog>
+  <dialog id="support-dialog" class="support-dialog" aria-labelledby="support-title">
+    <form method="dialog"><button class="close" aria-label="閉じて遊技に戻る">×</button></form>
+    <header class="support-heading"><span>YUA SAMA COLLECTION</span><h2 id="support-title">お貢ぎ</h2><p>ゆあ様の作品、もう少し覗いていく？</p></header>
+    <div class="support-links">
+      <a class="support-card" href="https://note.com/yotogichan" target="_blank" rel="noopener noreferrer"><b>note <span>↗</span></b><p>ゆあ様の記事と、ゲーム一覧はこちら。</p><small>noteを開く</small></a>
+      <a class="support-card" href="https://ci-en.dlsite.com/creator/40190" target="_blank" rel="noopener noreferrer"><b>Ci-en <span>↗</span></b><p>ゆあ様の漫画が気になったら、まずはサンプルから覗いていきな♡</p><small>Ci-enを開く</small></a>
+    </div>
+    <section class="support-manga"><h3>漫画サンプル</h3><img decoding="async" data-managed-src="assets/support-v01/manga-sample-v01.png" alt="ゆあ様の漫画サンプル" loading="lazy" draggable="false"><a href="https://ci-en.dlsite.com/creator/40190" target="_blank" rel="noopener noreferrer">続き・作品情報はCi-enへ ↗</a></section>
+    <section class="support-games"><h3>ゆあ様のゲーム</h3><div><b>オセロ</b><b>スロット</b><b>パチンコ</b></div><p>オセロやスロットにも、ゆあ様の遊び場を用意してる。気になったら、ゲームの案内を覗いていきな♡</p><a href="https://note.com/yotogichan" target="_blank" rel="noopener noreferrer">ゲームの案内を見る ↗</a></section>
+    <p class="support-note">リンクは別のタブで開きます。</p>
+  </dialog>
+  <dialog id="settings" aria-labelledby="settings-title">
+    <form method="dialog"><button class="close" aria-label="閉じる">×</button></form>
+    <span class="dialog-kicker">VIEW SETTINGS</span><h2 id="settings-title">見やすいバランスを探す</h2>
+    <p>液晶と釘盤の広さを切り替えて、玉の追いやすさを比べられます。</p>
+    <div class="layout-options" role="group" aria-label="液晶サイズ">
+      <button id="layout-wide" class="selected" aria-pressed="true">釘盤ひろめ<small>今回のサンプル</small></button>
+      <button id="layout-large" aria-pressed="false">液晶大きめ<small>演出を大きく</small></button>
+    </div>
+    <label class="switch"><span>玉をくっきり表示<small>光沢を強調・短い軌跡つき</small></span><input id="clear-balls" type="checkbox" checked></label>
+    <label class="switch"><span>釘と入口の名前を表示<small>ハカマ・風車・へそ・ワープなど</small></span><input id="pin-names" type="checkbox"></label>
+    <label class="switch"><span>スマホ幅で表示<small>スマホ相当の幅で比較</small></span><input id="phone-width" type="checkbox" checked></label>
+    <p id="route-stats" class="route-stats">Aルート 0球 ／ Bルート 0球</p>
+    <p id="path-stats" class="route-stats">ステージ 中央 0球・端 0球 ／ おまけ 0球 ／ アウト 0球 ／ スルー 0球・開放 0回</p>
+    <details class="light-settings" open><summary>光の色を試す</summary><p>文字と各ランプの色を、個別に変えられます。</p>
+      <div class="color-grid">
+        <label>筐体のランプ<input id="color-frame" type="color" value="#66e8b0"></label>
+        <label>枠のサブライト<input id="color-accent" type="color" value="#b491ff"></label>
+        <label>宗教非法人<input id="color-subtitle" type="color" value="#bfffe1"></label>
+        <label>ゆあ様ロゴ<input id="color-title" type="color" value="#92f1c6"></label>
+        <label>PUSH<input id="color-push" type="color" value="#b491ff"></label>
+        <label>ワープ入口<input id="color-warp" type="color" value="#ad91ff"></label>
+      </div>
+      <label class="brightness">発光の強さ<input id="brightness" type="range" min="0" max="100" value="80"></label>
+      <label class="light-pattern">光り方<select id="light-mode"><option value="steady">点灯</option><option value="pulse" selected>ゆっくり明滅</option><option value="rainbow">虹色に変化</option></select></label>
+      <button id="all-red" class="light-preview">全体を赤にして試す</button><button id="push-only" class="light-preview">PUSHだけ点滅して試す</button>
+    </details>
+    <section id="operator-panel" class="operator-panel" hidden><label>運営用の当選設定<select id="machine-setting"><option value="1">設定1</option><option value="2">設定2</option><option value="3" selected>設定3</option><option value="4">設定4</option><option value="5">設定5</option><option value="6">設定6</option></select></label><p>新しく入る保留から反映。設定3が従来の基準です。</p>
+      <section class="debug-odds" data-debug-only hidden aria-label="デバッグ用の当選確率">
+        <h3>抽選確率を試す</h3>
+        <p>通常・挑戦/RUSHの最終当選確率を1/Nで指定します。レリックの確率補正より優先し、新しく入る保留だけに反映。演出体験ボタンの結果は変わりません。再読込で設定値へ戻ります。</p>
+        <div class="debug-odds__fields"><label>通常時 1 / <input id="debug-normal-denominator" type="number" min="1" max="9999" step="0.1" inputmode="decimal" value="99.9"></label><label>挑戦・RUSH 1 / <input id="debug-special-denominator" type="number" min="1" max="9999" step="0.1" inputmode="decimal" value="7.4"></label></div>
+        <div class="debug-odds__actions"><button id="debug-odds-apply" type="button">確率を適用</button><button id="debug-odds-reset" type="button">設定値に戻す</button></div>
+        <p id="debug-odds-status" role="status" aria-live="polite">現在は設定の確率です。</p>
+      </section>
+      <section id="operator-stock" class="operator-stock" hidden aria-label="運営用の持ち玉調整">
+        <div class="operator-stock__current">現在の持ち玉：<output data-stock-current>—</output> 玉</div>
+        <label for="operator-stock-value">変更後の持ち玉</label>
+        <div class="operator-stock__row"><input id="operator-stock-value" data-stock-input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="9" autocomplete="off" aria-describedby="operator-stock-status"><button data-stock-apply type="button">適用</button></div>
+        <p id="operator-stock-status" data-stock-status role="status" aria-live="polite">0〜100,000,000玉の整数で指定できます。</p>
+      </section>
+    </section>
+    <button id="reset" class="reset">持ち玉を戻して最初から</button>
+    <p class="fineprint">見え方の設定中は遊技を一時停止します。</p>
+    <h3>音楽</h3>
+    <label class="music-setting">通常の曲<select id="normal-track"><option value="normal">通常 A</option><option value="shadow">トランス</option></select></label>
+    <label class="music-setting">RUSHの曲<select id="rush-track"><option value="shadow">トランス</option><option value="rush">疾走</option></select></label>
+    <p class="fineprint">ボーカル曲は10000発確定だけの特別演出。確定演出の後、歌い出しから流れます。</p>
+    <label class="music-setting">音楽の音量<input id="music-volume" type="range" min="0" max="100" value="70"></label>
+    <details><summary>音楽クレジット</summary><p>楽曲制作：<a href="https://www.d-elf.com/" target="_blank" rel="noopener">D’elf / d-elf.com</a><br></p><p><a href="https://www.d-elf.com/commercial-use" target="_blank" rel="noopener">商用利用条件</a> · <a href="https://www.d-elf.com/free-bgm" target="_blank" rel="noopener">音楽素材利用規約</a></p></details>
+  </dialog>
+  <dialog id="help" aria-labelledby="help-title">
+    <form method="dialog"><button class="close" aria-label="閉じる">×</button></form>
+    <span class="dialog-kicker">HOW TO PLAY</span><h2 id="help-title">まず一球、打ってみる。</h2>
+    <ol>
+      <li>PUSH右のハンドルを押している間、玉を発射します。上へドラッグすると強く、下へドラッグすると弱くなり、離すと止まります。下の「打ち出す」は連続発射のON／OFF。通常は左打ちで、中央のへそを狙います。</li>
+      <li>へそに入ると抽選の保留がたまります。保留は4つまで。図柄が動いている間も、そのまま打ち続けられます。</li>
+      <li>大当たりになったら「右打ちにする」。大入賞口に入った玉で賞球を獲得します。ラウンドの間も打ち続けられます。</li>
+      <li>挑戦・RUSHでは右打ちを続け、スルーを通して右のRUSH入口を開きます。残り回数と保留を消化したら結果へ。残保留からの復活もあります。リザルト表示中の入賞は通常保留にたまり、通常時に順番に抽選します（最大4個）。</li>
+      <li>出玉が増えたら「となりちゃんのお店」へ。購入したレリックはすぐに強化へ変わり、今回の遊技中ずっと有効。同じ品の価格は購入ごとに2倍です。</li>
+      <li data-reward-only hidden>「ゆあ様のご褒美」では、10,000玉・50,000玉・100,000玉の固定価格でご褒美を解禁。購入済みのご褒美は無料で何度でも見られます。</li>
+    </ol>
+    <p>祝福は4Rから挑戦へ。女王は8R（666からの昇格は12R）、覚醒は15RからRUSHへ。覚醒は3000玉、上位は10000玉を保証し、ポケット入賞分は別に上乗せされます。レリックによる全BONUS倍率も反映されます。</p>
+    <p>持ち玉と保留がなくなり、最後の玉・抽選が終わると、作品の広告を5秒見て500玉を受け取れます。「玉を補充」からコードも使えます。持ち玉・強化・遊技の続きは、このブラウザに保存されます。お店を開いている間は遊技が一時停止します。</p>
+    <p class="fineprint">PUSHは演出に参加するボタンです。当落は入賞時に決まり、PUSHを押さなくても変わりません。</p>
+  </dialog>
+  <dialog id="bonus-menu" aria-labelledby="bonus-menu-title">
+    <form method="dialog"><button class="close" aria-label="閉じる">×</button></form>
+    <span class="dialog-kicker">BONUS SELECT</span><h2 id="bonus-menu-title">演出を試す</h2>
+    <p>選んだ当たりを予約して打ち出します。大入賞口に玉を入れ、賞球とその後の遊技まで体験できます。</p>
+    <div class="bonus-options">
+      <button data-bonus="blessing"><small>BLESSING</small><b>祝福ボーナス</b><span>4R · 最大200玉 ／ 挑戦3回</span></button>
+      <button data-bonus="queen"><small>QUEEN</small><b>女王ボーナス</b><span>8R · 最大400玉 ／ RUSH6回</span></button>
+      <button data-bonus="awakening"><small>SPECIAL FEVER 3000</small><b>覚醒ボーナス</b><span>15R · 3000玉保証 ／ ST10回</span></button>
+      <button data-bonus="awakening" data-reward-target="10000"><small>SPECIAL FEVER 10000</small><b>10000発確定</b><span>15R · 10000玉保証 ／ ST10回</span></button>
+    </div><h3>キスの全画面大当たり</h3><div class="layered-options"><button data-bonus="awakening" data-cutin="kiss">キス顔＋ハート<small>3000発確定</small></button></div>
+    <h3>誘惑リーチ</h3>
+    <div class="layered-options"><button data-reach="allure" data-result="miss">通常音声・届かず</button><button data-reach="allure" data-result="win">通常音声・女王へ</button></div>
+    <div class="layered-options" data-debug-only hidden><button data-reach="allure" data-result="miss" data-allure-hot-voice="true">赤音声・届かず</button><button data-reach="allure" data-result="win" data-allure-hot-voice="true">赤音声・女王へ</button></div>
+    <div class="layered-options" data-debug-only hidden><button data-reach="allure" data-result="miss" data-allure-development="true">白強発展・届かず</button><button data-reach="allure" data-result="win" data-allure-development="true">白強発展・女王へ</button></div>
+    <div class="layered-options" data-debug-only hidden><button data-reach="allure" data-result="miss" data-allure-development="true" data-allure-hot-voice="true">白強発展＋赤音声・届かず</button><button data-reach="allure" data-result="win" data-allure-development="true" data-allure-hot-voice="true">白強発展＋赤音声・女王へ</button></div>
+    <h3>お貢ぎリーチ</h3>
+    <div class="layered-options"><button data-reach="tribute" data-result="miss">届かず</button><button data-reach="tribute" data-result="win">女王へ</button></div>
+    <div class="layered-options" data-debug-only hidden><button data-reach="tribute" data-result="miss" data-tribute-branch="green">緑発展・パリン</button><button data-reach="tribute" data-result="win" data-tribute-branch="green">緑発展・確定</button></div>
+    <div class="layered-options" data-debug-only hidden><button data-reach="tribute" data-result="miss" data-tribute-branch="red">赤発展・パリン</button><button data-reach="tribute" data-result="win" data-tribute-branch="red">赤発展・確定</button></div>
+    <h3>お祈りリーチ</h3><div class="prayer-options"><button data-prayer="miss">届かず</button><button data-prayer="win">祝福へ</button><button data-prayer="fizzle">発展せず</button><button data-prayer="miss" data-strong="true">降臨・届かず</button><button data-prayer="win" data-strong="true">降臨・祝福へ</button></div>
+    <h3>標準リーチ</h3><div class="layered-options"><button data-reach="standard" data-result="miss">届かず</button><button data-reach="standard" data-result="win">女王へ</button></div>
+    <h3>約束リーチ</h3><div class="layered-options"><button data-reach="promise" data-result="miss">届かず</button><button data-reach="promise" data-result="win">女王へ</button></div>
+    <div class="layered-options" data-debug-only hidden><button data-reach="promise" data-result="miss" data-promise-red="true">赤発展・届かず</button><button data-reach="promise" data-result="win" data-promise-red="true">赤発展・女王へ</button></div>
+    <h3>蛇眼の審判・閉眼から開眼</h3><div class="layered-options"><button data-reach="judgment" data-result="miss">届かず</button><button data-reach="judgment" data-result="win">覚醒へ</button></div>
+    <h3>シャッター・図柄が変わるかも</h3><div class="layered-options"><button data-shutter="same" data-result="miss">そのまま・届かず</button><button data-shutter="change" data-result="miss">変化・届かず</button><button data-shutter="same" data-result="win">そのまま・大当たり</button><button data-shutter="change" data-result="win">変化・大当たり</button></div>
+    <h3>リザルト・残保留</h3><div class="layered-options"><button data-result-demo="miss">リザルト終了</button><button data-result-demo="win">流れ星復活</button></div>
+    <h3>文字・カットイン</h3><div class="layered-options"><button data-scene-demo="mode">狂信者モード<small>文字を二段でドン！</small></button><button data-scene-demo="spam">スパム襲来<small>アラート専用演出</small></button><button data-scene-demo="temptation">誘惑カットイン<small>オセロのイラスト</small></button><button data-even-rush>偶数からRUSH<small>666で12Rへ昇格</small></button></div>
+    <div class="layered-options" data-debug-only hidden><button data-scene-demo="taunt">黒背景・ピンクの煽り</button><button data-scene-demo="shutter">図柄振動・シャッター単独</button></div>
+    <p class="fineprint">短い文字・カットインの確認中も、発射と玉の動きは続きます。リーチは通常の抽選でも発生し、PUSHの有無で当落は変わりません。奇数揃いはRUSH確定。偶数揃いは挑戦またはRUSHへ。</p><p class="fineprint">通常ボーナスの賞球は実入賞数で変わります。覚醒は保証分を満額受け取り、実入賞の賞球は別に加算されます。演出体験の保留には専用表示が付きます。</p>
+  </dialog>
+  <dialog id="relic-shop" aria-label="となりちゃんのレリックショップ"></dialog>
+  <dialog id="credits-dialog" aria-labelledby="credits-title">
+    <form method="dialog"><button class="close" aria-label="閉じる">×</button></form>
+    <span class="dialog-kicker">CONTINUE</span><h2 id="credits-title">玉を補充</h2>
+    <p>お持ちのコードを入力すると、今の持ち玉に加算されます。</p>
+    <section class="credit-panel"><label for="credit-code">補充コード</label><div class="credit-input-row"><input id="credit-code" autocapitalize="characters" autocomplete="off" spellcheck="false" placeholder="コードを入力"><button id="redeem-credit">補充</button></div><p id="credit-result" role="status" aria-live="polite">同じコードは今回の遊技で1回使えます。</p></section>
+  </dialog>
+  <section id="reward-gallery" hidden aria-label="ゆあ様のご褒美"></section>
+  <section id="diagonal-cutin" class="diagonal-cutin" hidden aria-label="斜めに横切る大当たりカットイン"><div class="diagonal-cutin__burst"></div><div class="diagonal-cutin__band"><img decoding="async" loading="lazy" class="diagonal-cutin__art" data-scene-src="assets/reaches/layered-v01/temptation-heart-v01.webp" alt="ゆあ様"><div class="diagonal-cutin__metal"></div><img decoding="async" loading="lazy" class="diagonal-cutin__text" data-scene-src="assets/reaches/layered-v01/bonus-title-v01.webp" alt="BONUS!!"></div><div class="diagonal-cutin__flash"></div></section>
+  <section id="awakening-cutin" class="awakening-cutin" hidden aria-label="覚醒大当たり 全画面カットイン">
+    <div class="awakening-cutin__premium-aura" aria-hidden="true"></div>
+    <img loading="lazy" class="awakening-cutin__premium" data-scene-src="assets/reaches/layered-v01/pv-premium-charge-v35.png" alt="涙を浮かべて前へ踏み出すゆあ様" decoding="async">
+    <img decoding="async" loading="lazy" class="awakening-cutin__art" data-scene-src="assets/reaches/layered-v01/temptation-heart-v01.webp" alt="こちらへ手を伸ばすゆあ様">
+    <img loading="lazy" class="awakening-cutin__kiss" data-scene-src="assets/reaches/layered-v01/kiss-face-v01.webp" alt="ガラス越しにキスをするゆあ様" decoding="async"><div class="kiss-hearts" data-kiss-hearts aria-hidden="true"></div><div class="kiss-contact" aria-hidden="true">♡</div>
+    <div class="awakening-cutin__rays"></div><div class="awakening-cutin__rim"></div>
+    <div class="awakening-cutin__eyebrow">女王、完全覚醒。</div>
+    <div class="awakening-cutin__seal"><b>覚醒</b><img decoding="async" loading="lazy" class="awakening-cutin__jackpot" data-scene-src="assets/reaches/layered-v01/bonus-title-v01.webp" alt="BONUS!!"></div>
+    <div class="special-fever-card"><img decoding="async" loading="lazy" data-scene-src="assets/reaches/layered-v01/special-fever-v01.webp" alt="SPECIAL FEVER"><img decoding="async" loading="lazy" class="fever-value" data-fever-3000 data-scene-src="assets/reaches/layered-v01/reward-3000-v01.webp" alt="3000発"><b class="rainbow-number" data-fever-number hidden>10000発</b><img decoding="async" loading="lazy" class="fever-confirmed" data-scene-src="assets/reaches/layered-v01/reward-confirmed-v01.webp" alt="確定"><p>スーパー調教タイム × 10</p></div>
+  </section>
+  <script type="module" src="startup-loader.js"></script>
+<script type="application/json" id="motion-diagnostics">{}</script>
+</body>
+</html>
+<script defer src="https://static.itch.io/htmlgame.js" type="text/javascript"></script>

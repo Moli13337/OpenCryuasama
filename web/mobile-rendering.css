@@ -1,0 +1,171 @@
+/* Mobile GPU budget. Desktop selectors never match these overrides.
+   Keep scene timing, camera transforms, colors, flashes and the player PUSH.
+   Prefer bounded translucent light over large, repeatedly blurred surfaces. */
+/* Keep the cabinet's exterior shadow without expanding its backing surface
+   by 168 CSS pixels in both dimensions on high-density phone displays. */
+html[data-render-quality="mobile"] .machine { box-shadow: 0 6px 12px #0009; }
+
+html[data-render-quality="mobile"] dialog::backdrop {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+/* A persistent will-change on every sprite can keep separate textures alive.
+   Active transform/opacity animations can still be composited by the browser. */
+html[data-render-quality="mobile"] :is(
+  .layered-character, .jackpot-pv img, .bonus-presentation img,
+  .bonus-presentation__round-intro, .prayer-ascension__sky,
+  .prayer-ascension__yua, .prayer-ascension__title,
+  .prayer-ascension__ring, .prayer-feather, .prayer-mote,
+  .tribute-intensity__ring, .tribute-intensity__spark,
+  .promise-announcement>img, .promise-red-development__art,
+  .reach-development__title, .reach-development__rays,
+  .reach-development__storm>.symbol-frame, .judgment-break__stage,
+  .judgment-break__image, .judgment-confirmation img,
+  .impact-titles__word, .awakening-cutin__kiss, .kiss-hearts i
+) { will-change: auto !important; }
+
+/* These rays used to span 160–240% of their clipped containers.
+   Preserve rotation and travel, with a smaller backing surface. */
+html[data-render-quality="mobile"] :is(
+  .jackpot-pv__rays, .jackpot-pv__sparks, .jackpot-pv__aurora,
+  .jackpot-pv__prism, .prayer-ascension__rays,
+  .reach-development__rays, .bonus-presentation__energy,
+  .awakening-cutin__rays, .awakening-cutin__premium-aura,
+  .diagonal-cutin__burst, .reward-burst
+),
+html[data-render-quality="mobile"] .promise-announcement::before,
+html[data-render-quality="mobile"] .promise-announcement::after,
+html[data-render-quality="mobile"] .promise-red-development::before,
+html[data-render-quality="mobile"] .tribute-development::before,
+html[data-render-quality="mobile"] .prayer-intro::before,
+html[data-render-quality="mobile"] .impact-titles::after {
+  inset: -8% !important;
+}
+html[data-render-quality="mobile"] :is(
+  .jackpot-pv__sweep, .allure-development__glint,
+  .promise-red-development__beam, .promise-red-development__slash
+) { inset: 0 !important; }
+html[data-render-quality="mobile"] :is(
+  .bonus-presentation__rays, .bonus-presentation__sweep
+) { inset: -8% -8% 20% !important; }
+
+/* No scene-wide backdrop sampling for stacked decorative layers. Alpha
+   gradients continue to provide the same palette and animated light pulses. */
+html[data-render-quality="mobile"] :is(
+  .jackpot-pv__rays, .jackpot-pv__sparks, .jackpot-pv__aurora,
+  .jackpot-pv__prism, .jackpot-pv__sweep, .jackpot-pv__shockwave,
+  .bonus-presentation__energy, .bonus-presentation__rays,
+  .bonus-presentation__sweep, .prayer-ascension__rays,
+  .prayer-ascension__particle, .promise-red-development__beam,
+  .promise-red-development__slash, .promise-red-development__flash,
+  .prayer-intro__light, .prayer-feather, .prayer-mote,
+  .awakening-cutin__rays, .allure-development__glint
+),
+html[data-render-quality="mobile"] .promise-announcement::after,
+html[data-render-quality="mobile"] .prayer-intro::before,
+html[data-render-quality="mobile"] .promise-red-development[data-stage="sword"]::after {
+  mix-blend-mode: normal !important;
+}
+
+/* Keep musical color grading and camera motion; the existing aurora/rays
+   supply the glow instead of a second, full-image blur pass every frame. */
+html[data-render-quality="mobile"] .jackpot-pv[data-premium="true"] .jackpot-pv__actor {
+  filter: brightness(var(--pv-character-light,1))
+          saturate(var(--pv-character-saturation,1.12))
+          hue-rotate(var(--pv-character-hue,0deg));
+}
+html[data-render-quality="mobile"] .jackpot-pv__shade { box-shadow: none !important; }
+html[data-render-quality="mobile"] .bonus-presentation[data-kind="queen"] .bonus-presentation__actor {
+  filter: brightness(calc(1.03 + var(--queen-beat,0)*.28)) saturate(1.22);
+}
+html[data-render-quality="mobile"] .bonus-presentation[data-kind="queen"] .bonus-presentation__halo {
+  box-shadow: none;
+  background: radial-gradient(ellipse,transparent 42%,var(--queen-color,#b789ff) 70%,transparent 73%);
+}
+html[data-render-quality="mobile"] :is(
+  .promise-red-development__art, .promise-red-development__word,
+  .promise-red-development__slash, .promise-announcement>img,
+  .prayer-ascension__yua, .prayer-ascension__title,
+  .tribute-development__art, .tribute-development__title,
+  .allure-development__panes, .diagonal-cutin__art,
+  .awakening-cutin__premium, .awakening-cutin__seal,
+  .number-focus-cutin__title
+) { filter: none !important; }
+html[data-render-quality="mobile"] .prayer-intro .prayer-intro__yua {
+  filter: brightness(calc(.5 + var(--prayer-aura,0)*.55));
+}
+html[data-render-quality="mobile"] .prayer-intro[data-stage="digits"] .prayer-intro__yua,
+html[data-render-quality="mobile"] .prayer-intro[data-stage="result"] .prayer-intro__yua {
+  filter: brightness(.7);
+}
+html[data-render-quality="mobile"] .prayer-intro::before { filter: none; }
+html[data-render-quality="mobile"] .prayer-intro__light {
+  filter: none;
+  clip-path: none;
+  background: linear-gradient(180deg,#fffdebaa,#e2ffb730 65%,transparent);
+  -webkit-mask-image: linear-gradient(90deg,transparent,#000 40% 60%,transparent);
+  mask-image: linear-gradient(90deg,transparent,#000 40% 60%,transparent);
+}
+
+/* Keep the whole-screen impact, but without a 140px blurred border. */
+html[data-render-quality="mobile"] .hot-stage-effects__edge {
+  box-shadow: none;
+  background: radial-gradient(ellipse,transparent 34%,#ffffff18 67%,#ffffffb3 100%);
+}
+html[data-render-quality="mobile"] .hot-stage-effects__wave {
+  width: 80vmin;
+  height: 80vmin;
+  box-shadow: 0 0 4px currentColor,inset 0 0 3px currentColor;
+}
+html[data-render-quality="mobile"] :is(
+  .prayer-ascension__ring, .jackpot-pv__shockwave,
+  .reach-development__ring
+) { box-shadow: 0 0 4px currentColor,inset 0 0 3px currentColor !important; }
+html[data-render-quality="mobile"] .prayer-ascension__ring { color: #ffd76d; }
+html[data-render-quality="mobile"] .jackpot-pv__shockwave { color: var(--pv-ink); }
+html[data-render-quality="mobile"] .reach-development__ring { color: #ff96c4; }
+html[data-render-quality="mobile"] .reach-development[data-level="2"] .reach-development__ring { color: #50ffa1; }
+html[data-render-quality="mobile"] .reach-development[data-level="3"] .reach-development__ring { color: #ff4931; }
+html[data-render-quality="mobile"] .kiss-hearts i,
+html[data-render-quality="mobile"] .kiss-contact {
+  text-shadow: 0 0 3px #ff33af,0 0 10px #ff159e;
+}
+
+/* SVG blur copies cover much more than each visible lamp. Keep the sharp
+   colored cores and screen flash; do not allocate blurred copies of the frame. */
+html[data-render-quality="mobile"] #cabinet-parts .glow { filter: none; }
+/* These filters otherwise survive the generic mobile .reel rule: the
+   centered reel and beam group have more specific scene selectors. The LCD
+   filter also processes the complete animated scene for a 1px border glow.
+   Keep camera transforms and the dedicated rays/flashes around the artwork. */
+html[data-render-quality="mobile"] .rich-material .lcd,
+html[data-render-quality="mobile"] .lcd>.reels,
+html[data-render-quality="mobile"] .lcd>.reels>.reel { filter: none !important; }
+html[data-render-quality="mobile"] .reel,
+html[data-render-quality="mobile"] #screen>.portrait { filter: none; }
+
+/* The in-monitor lead-in also avoids backdrop sampling; the PUSH burst is
+   rasterized in one explicitly bounded canvas by JudgmentConfirmation. */
+html[data-render-quality="mobile"] .judgment-confirmation img {
+  filter: none;
+  mix-blend-mode: normal;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+/* Each mobile reel is one view-sized buffer. There is no offscreen 1000%
+   strip; the exact atlas artwork scrolls through the canvas viewport. */
+.reel[data-reel-renderer="canvas"]>.reel-canvas {
+  position:absolute;inset:0;display:block;width:100%;height:100%;opacity:1;
+  pointer-events:none;will-change:auto;
+}
+.reel[data-reel-renderer="canvas"]:not(.spinning)>.reel-canvas {
+  animation:reel-stop .22s ease-out;
+}
+@media(prefers-reduced-motion:reduce){
+  .reel[data-reel-renderer="canvas"]>.reel-canvas { animation:none!important; }
+}
+
+/* If no canvas can be allocated, preserve readable values without a tall strip. */
+html[data-render-quality="mobile"] .reel[data-reel-renderer="static"] .settled { opacity: 1 !important; visibility: visible !important; }

@@ -1,0 +1,15 @@
+.lcd[data-miss-result=result]>.lcd-space{background:radial-gradient(ellipse,#871c66aa,#23192e 75%)}
+.lcd[data-miss-result]>.layered-scene,.lcd[data-miss-result]>.prayer-scene{opacity:var(--miss-scenery-opacity,1)}
+.lcd[data-miss-result=shatter]>.reels{visibility:hidden!important}
+.lcd[data-miss-result]>.lcd-push{display:none!important}
+.miss-glass{position:absolute;inset:0;z-index:39;pointer-events:none;overflow:hidden;opacity:calc(1 - var(--break-progress));background:radial-gradient(circle at 48% 44%,#f5d7fa66,transparent 48%)}
+.miss-glass[hidden]{display:none}
+.miss-glass svg{position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:#f7e9ff;stroke-width:.28;filter:drop-shadow(0 0 2px #ba7de8);transform:scale(calc(1 + var(--break-progress)*.18))}
+.miss-glass i{position:absolute;left:38%;top:34%;width:30%;height:36%;background:linear-gradient(150deg,#f2e5ff99,#ffffff08 52%,#b681ec66);border:1px solid #e1cafb77;clip-path:polygon(30% 0,100% 78%,0 100%);transform:rotate(var(--angle)) translateY(calc(var(--break-progress)*-72cqw)) rotate(calc(var(--break-progress)*100deg));opacity:.7}
+.miss-glass__impact{position:absolute;z-index:2;left:2%;top:35%;width:96%;text-align:center;font:900 17cqw/1.1 'Hiragino Mincho ProN','Yu Mincho',serif;color:#fff8fa;-webkit-text-stroke:.6cqw #9b164e;text-shadow:0 0 3cqw #ff6ab4,0 .7cqw 0 #4b133b;transform:scale(calc(1 + var(--break-progress)*.8)) rotate(-7deg)}
+.miss-glass__impact[hidden]{display:none!important}
+.miss-glass[data-reduced=true] i{display:none}.miss-glass[data-reduced=true] svg{transform:none}
+/* One audio clock drives these pulses, independently of the rolling strips. */
+.lcd .reels>.reel{scale:var(--heartbeat-scale,1);transform-origin:center}
+
+.lcd .reels .symbol-art{filter:brightness(var(--heartbeat-brightness,1))}

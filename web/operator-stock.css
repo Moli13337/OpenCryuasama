@@ -1,0 +1,10 @@
+.operator-stock{margin-top:14px;padding-top:13px;border-top:1px solid #806b8b66}
+.operator-stock[hidden]{display:none!important}
+.operator-panel .operator-stock label{display:block;margin:9px 0 6px;font-size:12px}
+.operator-stock__current{font-size:11px;color:#d3c2dc}
+.operator-stock__row{display:flex;gap:8px;align-items:center}
+.operator-stock__row input{min-width:0;width:100%;flex:1;padding:10px;color:#f3e9f8;background:#111019;border:1px solid #776284;border-radius:5px;font:16px/1.2 sans-serif;font-variant-numeric:tabular-nums}
+.operator-stock__row input[aria-invalid=true]{border-color:#f397ac}
+.operator-stock__row button{flex:none;padding:10px 16px;border:1px solid #bd9cd3;border-radius:5px;background:#54376a;font-size:12px}
+.operator-stock [data-stock-status]{min-height:2.8em;margin:8px 0 0;color:#c9d9c6;overflow-wrap:anywhere}
+.operator-stock [data-stock-status][data-error=true]{color:#ffc0ce}

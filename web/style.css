@@ -1,0 +1,204 @@
+@import url('./prayer-ascension.css');
+:root{color-scheme:dark;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;background:#080a0e;color:#eae7ed;font-synthesis:none}
+
+/* Only Yua's small-screen normal backdrop identifies the machine setting. */
+#screen[data-setting="1"]{--normal-setting-color:#f4f5f8;--normal-setting-dark:#c2c8d3}
+#screen[data-setting="2"]{--normal-setting-color:#77b9ff;--normal-setting-dark:#2954a6}
+#screen[data-setting="3"]{--normal-setting-color:#90e6aa;--normal-setting-dark:#326c4b}
+#screen[data-setting="4"]{--normal-setting-color:#fff18a;--normal-setting-dark:#ac8430}
+#screen[data-setting="5"]{--normal-setting-color:#ff999c;--normal-setting-dark:#a52b42}
+#screen[data-setting="6"]{--normal-setting-color:#d8a4ff;--normal-setting-dark:#6c339b}
+#screen[data-play-mode="normal"]:is(.phase-idle,.phase-spin)>.lcd-space{background:radial-gradient(ellipse at 60% 25%,#fff9,transparent 65%),repeating-conic-gradient(from 30deg at 50% 35%,#ffffff1c 0deg 2deg,transparent 2deg 17deg),linear-gradient(130deg,var(--normal-setting-color),var(--normal-setting-dark))}
+*{box-sizing:border-box}body{margin:0;min-height:100svh;background:radial-gradient(ellipse at 20% 35%,#15291e60,transparent 50%),radial-gradient(ellipse at 85% 55%,#301c3760,transparent 55%),#080a0e}button,input{-webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit;cursor:pointer;touch-action:manipulation}button:focus-visible,input:focus-visible{outline:2px solid #9ff7bb;outline-offset:3px}button{border:0}button:disabled{opacity:.4;cursor:default}button:hover{filter:brightness(1.15)}[hidden]{display:none!important}.game-shell{width:min(100%,560px);margin:0 auto;padding:0 10px calc(5px + env(safe-area-inset-bottom))}.game-shell.phone{max-width:410px}.topbar{display:flex;justify-content:space-between;align-items:center;height:40px;gap:8px}.edition{font-size:9px;letter-spacing:1.4px;color:#96929e;white-space:nowrap}.edition i{display:inline-block;width:5px;height:5px;background:#9ae1b2;border-radius:50%;margin-right:8px;box-shadow:0 0 8px #66eb9e}.edition b{color:#bab2c5;font-weight:400;margin-left:4px}.top-actions{display:flex;gap:4px}.quiet{background:transparent;color:#b9b4c0;font-size:11px;padding:7px 8px;border-radius:5px}.quiet[aria-pressed=true]{color:#b6f7cc}.meters{height:40px;display:grid;grid-template-columns:1.2fr 1fr 1fr .8fr;gap:8px;align-items:center;border-top:1px solid #ffffff10}.meters>div{display:flex;align-items:baseline;gap:8px}.meters span{font-size:10px;color:#948d9a;white-space:nowrap}.meters strong{font-family:Georgia,serif;font-weight:400;font-variant-numeric:tabular-nums;font-size:20px;color:#efe2b8}.meters .mode-meter{justify-content:flex-end}.mode-meter strong{font-size:15px}.mode-meter.active span{color:#9bf6bc}.machine-wrap{display:flex;justify-content:center}.machine{width:min(100%,calc((100svh - 194px)*.666667));position:relative;aspect-ratio:2/3;isolation:isolate;user-select:none;container-type:inline-size;overflow:hidden;border-radius:10px;border:1px solid #5d4d6838;box-shadow:0 16px 55px #0009}.cabinet{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;pointer-events:none}#board{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2}.lcd{position:absolute;left:23.24%;top:18.55%;width:53.61%;height:39.39%;overflow:hidden;background:#090b11;border:2px solid #866c84;border-radius:6px;z-index:3;box-shadow:0 0 7px #000;container-type:inline-size;transition:left .28s,width .28s,top .28s,height .28s,box-shadow .3s}.lcd.large{left:18.55%;top:17.58%;width:62.99%;height:41.02%}.lcd-space{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 20%,#70398255,transparent 65%),repeating-conic-gradient(from 30deg at 50% 45%,#65c68612 0deg 1deg,transparent 1deg 15deg),linear-gradient(#0a0c10,#17221f 55%,#0a0b0d)}.aura{position:absolute;border:1px solid #69d69a44;border-radius:50%;height:76%;width:140%;left:-20%;top:0;box-shadow:inset 0 0 20px #75dfb51a,0 0 20px #75dfb51a;animation:orbit 24s linear infinite}.aura:before,.aura:after{content:"";position:absolute;inset:7%;border:1px dashed #e1c49040;border-radius:50%}.aura:after{inset:18%}.aura-two{transform:rotate(60deg);animation-direction:reverse;width:110%;left:-5%;height:90%;border-color:#a956c14d}.portrait{position:absolute;left:-46%;top:4%;width:200%;height:77%;object-fit:contain;filter:drop-shadow(0 0 8px #ac6ba459);transform-origin:50% 34%;animation:breathe 7s ease-in-out infinite;pointer-events:none}.lcd-vignette{position:absolute;inset:0;background:linear-gradient(transparent 25%,#070b0830 50%,#090a0ed9 82%,#07090bf5);pointer-events:none}.scanlines{position:absolute;inset:0;opacity:.06;pointer-events:none;background:repeating-linear-gradient(transparent 0 2px,#000 2px 3px)}.screen-mode{position:absolute;top:3%;left:5%;font-size:5cqw;letter-spacing:.15em;color:#c2c5c0;text-shadow:0 2px 2px black}.demo-tag{position:absolute;right:4%;top:3%;font-size:4cqw;color:#ddd1e8;background:#3c254eaa;padding:3px 5px;border-radius:3px}.cue{position:absolute;top:43%;width:100%;text-align:center;font-family:serif;font-size:9cqw;font-weight:900;color:#f8edca;text-shadow:0 1px #000,1px 1px #6b3d19,0 0 12px #ab7627;letter-spacing:.08em;z-index:3}
+/* The image, rather than the font baseline, defines a symbol's full bounds. */
+.reels{position:absolute;top:53%;height:30%;left:2%;width:96%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;isolation:isolate}
+.reel{position:relative;min-width:0;height:100%;overflow:hidden;filter:drop-shadow(0 2px 2px #000a)}
+.settled{position:absolute;inset:0}
+.symbols{display:none;position:absolute;inset:0 0 auto;height:1000%;flex-direction:column;will-change:transform}
+.symbol-frame{position:relative;display:flex;align-items:center;justify-content:center;width:100%;height:100%;flex-shrink:0}
+.symbols>.symbol-frame{height:10%;flex:0 0 10%}
+.symbol-art{position:absolute;width:100%;height:100%;object-fit:contain;object-position:center;opacity:0;pointer-events:none}
+.art-ready>.symbol-art{opacity:1}
+.symbol-fallback{font:900 28cqw/.95 Georgia,serif;color:var(--symbol-color);-webkit-text-stroke:.6px #ffe9ad;text-shadow:1px 2px 0 #321706}
+.art-ready>.symbol-fallback{visibility:hidden}
+.phase-spin .reel .settled,.phase-reach .reel:nth-child(2) .settled{visibility:hidden}
+.phase-spin .reel .symbols,.phase-reach .reel:nth-child(2) .symbols{display:flex;animation:rolling .72s linear infinite}
+.phase-spin .reel:nth-child(2) .symbols{animation-duration:.63s}
+.phase-spin .reel:nth-child(3) .symbols{animation-duration:.81s}
+.phase-reach .portrait{animation:reach-portrait 3s ease-out forwards}.phase-reach .cue{font-size:13cqw;top:44%;color:#fff0cb;animation:cue-glow .55s ease-in-out infinite alternate}.phase-reach .lcd-space{background:radial-gradient(ellipse,#871c66aa,#0a0a0b 70%)}.phase-win .cue{font-size:16cqw;top:38%;animation:win-title .5s cubic-bezier(.2,1.6,.4,1)}.phase-win .portrait{animation:win-portrait 4s ease-out forwards}.phase-win .aura{border-color:#e7c76a;animation-duration:4s;box-shadow:0 0 20px #83f98b80}.phase-win .reels{top:52%;height:32%;animation:win-digits .5s ease-out}.outcome{position:absolute;top:83%;width:100%;text-align:center;font-size:6cqw;color:#ead9a8;letter-spacing:.1em;font-weight:600}.holds{position:absolute;bottom:3.5%;height:5%;display:flex;gap:6cqw;left:0;width:100%;justify-content:center}.holds i{display:block;width:6cqw;height:6cqw;max-height:100%;border-radius:50%;background:#15181a;border:1px solid #887453;box-shadow:inset 0 1px 4px #000}.holds i.full{background:radial-gradient(circle at 30% 20%,white,#59e694 35%,#0a462c 70%);box-shadow:0 0 7px #3dea8670}.holds i.hot{background:radial-gradient(circle at 30% 20%,white,#ffd452 35%,#a96b0c 70%);box-shadow:0 0 8px #ffcf64}.lcd-push{position:absolute;top:75%;left:29%;width:42%;height:11%;background:radial-gradient(ellipse,#9e5adb,#392757);border:2px solid #dfcfa3;border-radius:50%;font:900 9cqw Georgia,serif;color:#ffebc0;z-index:9;box-shadow:0 0 15px #bc71ff;animation:push-pulse .45s ease-in-out infinite alternate}.lcd.pushed .lcd-push{transform:scale(.86);animation:none}.win-flash{position:absolute;inset:0;pointer-events:none;opacity:0;background:radial-gradient(ellipse at center,#fff5c1,#64fb8980,transparent)}.phase-win .win-flash{animation:flash .65s ease-out}.physical-push,.handle{position:absolute;background:transparent;z-index:4;border-radius:50%;touch-action:none}.physical-push{left:36%;top:84%;width:28%;height:13%}.handle{left:83%;top:83%;width:14%;height:14%}.physical-push:active{background:#edbaff30;box-shadow:0 0 30px #e1b0ff}.handle.held{box-shadow:inset 0 0 25px #96ffd966,0 0 12px #96ffd966}.intro{position:absolute;top:67%;left:9%;width:82%;z-index:6;text-align:center;font-size:3.5cqw;color:#fff4d7;padding:3% 2%;background:#070b0fe8;border:1px solid #d1ae6545;border-radius:7px;transition:opacity .5s;pointer-events:none}.intro span{display:block;font-size:2.7cqw;color:#b3bab6;margin-top:5px}.intro.dismissed{opacity:0}.controls{padding-top:9px}.fire-row{display:flex;gap:13px;align-items:center}.fire{height:43px;border-radius:7px;background:linear-gradient(135deg,#204934,#153326);border:1px solid #75c59180;box-shadow:0 0 15px #13472a40;display:flex;align-items:center;justify-content:center;gap:9px;width:47%;font-weight:600;letter-spacing:.06em;font-size:14px;white-space:nowrap}.fire.active{background:#221d2d;border-color:#ae8ac194;color:#dccfe6}.fire-icon{font-size:20px;color:#adf4c4}.power{flex:1;min-width:0}.power span{font-size:10px;color:#b7aebf;display:flex;justify-content:space-between}.power b{font-variant-numeric:tabular-nums;color:#dcd3c0;font-weight:400}.power input{width:100%;margin:5px 0 0;accent-color:#94c5a3;cursor:pointer;height:19px}.sub-controls{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:31px}.sub-controls>span{font-size:10px;color:#bab1c0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.demo{white-space:nowrap;background:transparent;font-size:10px;color:#d5c28e;padding:7px 0 7px 6px}.demo span{margin-left:3px;font-size:14px}footer{font-size:9px;color:#686471;text-align:center;line-height:17px;letter-spacing:.02em}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}dialog{background:#111319;color:#ede8f2;border:1px solid #5e5269;border-radius:16px;width:min(92vw,430px);padding:29px 24px;box-shadow:0 20px 100px #000b}dialog::backdrop{background:#030609bf;backdrop-filter:blur(7px)}.close{position:absolute;right:14px;top:10px;background:transparent;font-size:27px;color:#a799b4}.dialog-kicker{color:#adbeaa;font-size:9px;letter-spacing:.23em}dialog h2{font-size:19px;margin:11px 0 14px;letter-spacing:.03em}dialog p,dialog li{font-size:12px;line-height:1.9;color:#b8afc0}dialog ol{padding-left:22px}dialog li{padding-left:5px;margin:9px 0}.layout-options{display:flex;gap:9px;margin:22px 0}.layout-options button{flex:1;padding:13px 5px;background:#202029;border:1px solid #514454;border-radius:7px;font-size:13px}.layout-options small{display:block;font-size:10px;color:#a499af;margin-top:5px}.layout-options .selected{background:#233c2e;border-color:#8db79b}.switch{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 0;border-bottom:1px solid #ffffff0c;font-size:13px}.switch small{display:block;font-size:10px;margin-top:6px;color:#8e8797}.switch input{accent-color:#9bd4ad;width:18px;height:18px;flex-shrink:0}.reset{display:block;width:100%;background:#26222d;border:1px solid #4f415d;padding:12px;margin-top:22px;border-radius:6px;font-size:12px}.fineprint{font-size:10px!important;color:#8b8295!important}.machine.jolt{animation:jolt .26s ease-out}
+@keyframes orbit{to{rotate:360deg}}@keyframes breathe{50%{transform:translateY(-1%) scale(1.018)}}@keyframes rolling{to{transform:translateY(-90%)}}@keyframes reach-portrait{from{transform:scale(1.05)}to{transform:scale(1.2) translateY(1%)}}@keyframes cue-glow{to{text-shadow:0 0 15px #ff3677,0 0 30px #ce296d}}@keyframes win-title{from{transform:scale(2.2);opacity:0}to{transform:scale(1);opacity:1}}@keyframes win-digits{from{transform:scale(.86);opacity:.35}to{transform:scale(1);opacity:1}}@keyframes win-portrait{from{transform:scale(1.18)}to{transform:scale(1.08)}}@keyframes push-pulse{to{filter:brightness(1.45);scale:1.05}}@keyframes flash{0%{opacity:.8}100%{opacity:0}}@keyframes jolt{20%{transform:translateX(2px)}45%{transform:translateX(-2px)}70%{transform:translateX(1px)}}
+@media(max-height:700px){.topbar{height:32px}.meters{height:33px}.machine{width:min(100%,calc((100svh - 174px)*.666667))}.fire{height:39px}footer{font-size:8px}}@media(prefers-reduced-motion:reduce){.aura,.portrait{animation:none!important}.machine.jolt{animation:none}.win-flash{display:none}.lcd{transition:none}}
+
+/* Every cabinet shape is neutral. Only these separate layers emit light. */
+.native-cabinet>svg{display:block;width:100%;height:100%;overflow:visible}
+.emissive.zone-frame{opacity:var(--frame-intensity,.8)}
+.emissive.zone-subtitle{opacity:var(--subtitle-intensity,.8)}
+.emissive.zone-title{opacity:var(--title-intensity,.8)}
+.emissive.zone-push{opacity:var(--push-intensity,.8)}
+.emissive.zone-warp{opacity:var(--warp-intensity,.8)}
+/* Position and clipping come from the same polygon as the physical collider. */
+.lcd{border:0;border-radius:0;box-shadow:none;transition:none}
+.screen-mode{left:14%;top:4%}.demo-tag{right:14%;top:4%}
+.portrait{width:240%;left:-68%;height:104%;top:-10%}
+.physical-push:active{background:color-mix(in srgb,var(--push-light) 20%,transparent);box-shadow:0 0 30px var(--push-light)}
+.handle.held{box-shadow:inset 0 0 18px color-mix(in srgb,var(--frame-light) 45%,transparent)}
+dialog{max-height:88svh;overflow:auto}.light-settings{margin-top:18px;border:1px solid #414753;border-radius:9px;padding:13px}
+.light-settings summary{font-size:13px;cursor:pointer}.color-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:17px 0}
+.color-grid label{font-size:11px;display:flex;align-items:center;justify-content:space-between;gap:9px;color:#c0c5ce}
+.color-grid input[type=color]{width:38px;height:30px;padding:2px;border:1px solid #657080;border-radius:5px;background:#171c25;cursor:pointer}
+.brightness,.light-pattern{display:flex;justify-content:space-between;align-items:center;font-size:11px;gap:14px;margin:15px 0}
+.brightness input{width:55%;accent-color:#b4c1d0}.light-pattern select{color:#eceff3;background:#202632;padding:6px;border:1px solid #505b6b;border-radius:4px}
+.light-preview{padding:9px 12px;width:100%;background:#32252b;border:1px solid #76515f;border-radius:5px;font-size:11px}
+.route-stats{font-variant-numeric:tabular-nums}.light-settings p{margin:8px 0;font-size:10px;color:#919aa8}
+
+/* Rich material is sliced into physical pieces and lit through separate masks. */
+.has-skin .skin-piece{isolation:isolate}
+.has-skin .logo,.has-skin .frame-metal,.has-skin>svg>.zone-frame,.has-skin .push-part,.has-skin .handle-part,.has-skin .tray{display:none}
+.has-skin>svg>g[fill="url(#mesh)"]{display:none}
+.has-skin .skin-light{display:initial}
+.rich-material .physical-push{left:35%;top:90%;width:30%;height:7.5%}
+.rich-material .handle{left:83%;top:90%;width:14%;height:9%}
+.rich-material .physical-push:active{box-shadow:0 0 22px var(--push-light);background:color-mix(in srgb,var(--push-light) 25%,transparent)}
+.rich-material .lcd{filter:drop-shadow(0 0 1px #d2b277)}
+
+.emissive.zone-accent{opacity:var(--accent-intensity,.8)}
+.light-preview+.light-preview{margin-top:8px;background:#222d3e;border-color:#455d83}
+
+/* Prompts stay below the symbol row, inside the irregular glass. */
+.lcd-push{top:84%;height:7%;font-size:6.5cqw;line-height:1}
+.outcome{top:85%;font-size:5cqw}
+@media(prefers-reduced-motion:reduce){.symbols{animation-duration:1.8s!important}.phase-win .reels{animation:none}}
+
+/* Pearl plate and a luminous silk field keep the ball paths and symbols readable. */
+body{background:radial-gradient(ellipse at 15% 30%,#324b4566,transparent 55%),radial-gradient(ellipse at 85% 65%,#56415d55,transparent 55%),#11151c}
+.lcd-space{background:radial-gradient(ellipse at 70% 16%,#dfd6ad99,transparent 62%),repeating-conic-gradient(from 30deg at 50% 35%,#c5f5d71a 0deg 2deg,transparent 2deg 17deg),linear-gradient(125deg,#588b79,#5c4f77 58%,#a59db0)}
+.lcd-vignette{background:linear-gradient(transparent 28%,#b3b8ad0a 44%,#bacbc29e 66%,#737586d9 100%)}
+.reels:before{content:"";position:absolute;inset:-6% -5%;background:radial-gradient(ellipse,#f2ede467,transparent 73%);z-index:-1}
+.phase-reach .lcd-space{background:radial-gradient(ellipse at 50% 35%,#dc94c0,#544968)}
+.phase-win .lcd-space{background:radial-gradient(ellipse at 50% 35%,var(--bonus-color),#726881)}
+.phase-spin .reel .settled,.phase-reach .reel:nth-child(2) .settled{visibility:visible}
+.phase-spin .reel .symbols,.phase-reach .reel:nth-child(2) .symbols{display:none;animation:none}
+.reel.spinning .settled{visibility:hidden}
+.phase-spin .reel.spinning .symbols,.phase-reach .reel.spinning .symbols{display:flex;animation:rolling .72s linear infinite}
+.phase-spin .reel:nth-child(2).spinning .symbols{animation-duration:.63s}
+.phase-spin .reel:nth-child(3).spinning .symbols{animation-duration:.81s}
+.reel:not(.spinning) .settled{animation:reel-stop .22s ease-out}
+.phase-reach .reel:nth-child(2).spinning .symbols{animation-duration:1.35s}
+.symbol-fallback{-webkit-text-stroke:1.2px #fff;font-style:italic;text-shadow:2px 3px 0 #182b43}
+.outcome{color:#fff8df;text-shadow:0 1px 3px #263643,0 0 4px #263643}
+.round-status{position:absolute;top:77%;width:100%;text-align:center;font-size:4.5cqw;font-weight:700;color:#fff9e7;text-shadow:0 1px 3px #263643;z-index:4}
+.phase-win .reels{top:49%;height:28%}.phase-win .outcome{top:84%;font-size:6cqw}
+.phase-win .cue{top:37%;font-size:13cqw;color:var(--bonus-color);-webkit-text-stroke:.5px #fff;text-shadow:1px 2px 2px #292732,0 0 12px var(--bonus-color)}
+.bonus-rays{position:absolute;inset:-40%;pointer-events:none;opacity:0;mix-blend-mode:soft-light;background:repeating-conic-gradient(from 0deg,#fff8dc 0deg 4deg,transparent 5deg 22deg);z-index:0}
+.phase-win .bonus-rays{opacity:.6;animation:orbit 12s linear infinite}
+.lcd[data-bonus=blessing] .bonus-rays{border-radius:50%;background:repeating-radial-gradient(ellipse,#c9ffec77 0 2%,transparent 3% 12%);animation:blessing-wave 3s ease-in-out infinite}
+.lcd[data-bonus=queen] .bonus-rays{background:repeating-conic-gradient(from 25deg,#edb8ff 0 3deg,transparent 4deg 65deg);animation:orbit 7s linear infinite}
+.lcd[data-bonus=awakening] .bonus-rays{animation:orbit 3s linear infinite;opacity:.9}
+.bonus-options{display:grid;gap:12px}.bonus-options button{text-align:left;border:1px solid #6b937f;border-radius:10px;padding:17px;background:linear-gradient(120deg,#284b3d,#182b28);box-shadow:inset 0 1px #fff2}
+.bonus-options button[data-bonus=queen]{border-color:#9475b1;background:linear-gradient(120deg,#523a67,#252136)}
+.bonus-options button[data-bonus=awakening]{border-color:#b59b5f;background:linear-gradient(120deg,#675432,#2e2a24)}
+.bonus-options small{font:10px Georgia,serif;letter-spacing:.2em;color:#ddd5bc}.bonus-options b{display:block;font:900 24px serif;margin:5px 0 8px}.bonus-options span{font-size:12px;color:#e4ddd3}
+.sub-controls>span{white-space:normal;line-height:1.4;min-height:25px;padding:5px 0}.sub-controls{min-height:39px}
+@keyframes reel-stop{0%{transform:translateY(-8%)}65%{transform:translateY(3%)}100%{transform:translateY(0)}}
+@keyframes blessing-wave{50%{scale:1.1;opacity:.35}}
+@media(prefers-reduced-motion:reduce){.bonus-rays,.reel .settled{animation:none!important}}
+
+/* An irregular LCD is a viewport, never a scroll container. Focusing PUSH
+   must not scroll the portrait and reels upward into its hidden overflow. */
+.lcd{overflow:clip}
+
+/* Direction is explained beside the handle, leaving the physical ball path clear. */
+.play-guide{display:flex;align-items:center;gap:8px;min-height:31px;margin:0 0 7px;padding:5px 7px;border:1px solid #789e8566;border-radius:6px;background:#213e324d;color:#d3eddd}
+.play-guide strong{font-size:13px;white-space:nowrap;letter-spacing:.04em}
+.play-guide>span{font-size:10px;flex:1;line-height:1.3}
+.play-guide button{font-size:10px;white-space:nowrap;background:#355a48;border:1px solid #8dc39c88;border-radius:4px;padding:5px 7px;color:#f4ffed}
+.play-guide button:disabled{opacity:.55;cursor:default}
+.play-guide[data-direction=right]{border-color:#dcb875aa;background:linear-gradient(100deg,#65432766,#53335c66);color:#ffe8ad}
+.play-guide[data-direction=right] button{background:#69502d;border-color:#e2ba71}
+.play-guide[data-wrong=true]{box-shadow:0 0 9px #e9b95135}
+.machine{width:min(100%,calc((100svh - 232px)*.666667))}
+@media(max-height:700px){.machine{width:min(100%,calc((100svh - 212px)*.666667))}}
+
+/* The prayer clip remains inside the existing LCD silhouette. */
+.prayer-scene{position:absolute;inset:0;overflow:hidden;background:radial-gradient(ellipse at 50% 25%,#74608e,#465b64);pointer-events:none}
+.prayer-scene[hidden]{display:none}.prayer-scene video{width:100%;height:100%;object-fit:cover;object-position:50% 42%;display:block}
+.prayer-glow{position:absolute;inset:0;background:linear-gradient(transparent 40%,#5b526620 55%,#d3d4c09c 82%,#697988bd);pointer-events:none}
+.prayer-scene p{position:absolute;top:57%;left:4%;width:92%;margin:0;text-align:center;color:#fffdf0;font-size:7cqw;font-weight:800;text-shadow:0 2px 2px #35263a,0 0 7px #47345e;letter-spacing:.03em}
+.lcd.prayer-active .portrait,.lcd.prayer-active .aura,.lcd.prayer-active .scanlines,.lcd.prayer-active .lcd-vignette{visibility:hidden}
+.lcd.prayer-active .cue{top:11%;font-size:8cqw;animation:none;color:#ecffe5;text-shadow:0 2px 3px #3f294f,0 0 10px #3d8763}
+.lcd.prayer-active .reels{top:69%;height:18%;left:14%;width:72%}.lcd.prayer-active .reels:before{background:radial-gradient(ellipse,#eee7c8a8,transparent 75%)}
+.lcd.prayer-active .lcd-push{top:47%;height:8%;width:32%;left:34%;font-size:6cqw;animation-duration:1.1s}
+.prayer-options{display:flex;gap:10px}.prayer-options button{flex:1;padding:12px;background:#263f39;border:1px solid #94bfa8;border-radius:7px;color:#eaffed}
+.prayer-scene[data-step=resolve] .prayer-glow{background:radial-gradient(ellipse at 50% 65%,#dfffd54d,transparent 65%),linear-gradient(transparent 45%,#b0b8b082,#79758cb3)}
+
+/* Ordinary BONUS has its own round scene; aiming and payouts stay above it. */
+.lcd.bonus-active>.portrait,.lcd.bonus-active>.aura,.lcd.bonus-active>.reels,.lcd.bonus-active>.cue,.lcd.bonus-active>.screen-mode,.lcd.bonus-active>.bonus-rays,.lcd.bonus-active>.scanlines,.lcd.bonus-active>.lcd-vignette{visibility:hidden}
+.lcd.bonus-active>.outcome{z-index:8;left:7%;width:61%;top:77%;font-size:8cqw;text-align:left;color:#fff0b8}
+.lcd.bonus-active>.round-status{z-index:8;left:7%;width:61%;top:85%;font-size:3.7cqw;text-align:left;letter-spacing:0}
+.lcd.bonus-active>.demo-tag{z-index:8;right:6%;top:7%;font-size:3cqw}
+
+.prayer-scene{background:#465b64 var(--prayer-poster,none) center 42%/cover no-repeat}
+.prayer-scene[data-media=loading] video,.prayer-scene[data-media=fallback] video,.prayer-scene[data-media=still] video{opacity:0}
+
+/* Player surface. Operator tools remain behind the explicit operator URL. */
+.topbar{justify-content:flex-end}.topbar:has(.edition:not([hidden])){justify-content:space-between}
+.side-destinations button{min-height:44px}.credit-input-row input{font-size:16px}
+.session-notice{display:flex;justify-content:space-between;align-items:center;gap:12px;line-height:1.5}
+.session-notice button{flex-shrink:0;padding:10px;background:#67502a;border:1px solid #d1b376;border-radius:5px;color:#fff5de}
+.bonus-guarantee:after{content:attr(data-multiplier);position:absolute;left:98%;top:5%;font:900 italic 8cqw Georgia,serif;color:#fff2b4;text-shadow:1px 2px #651352;white-space:nowrap}
+.lcd{contain:layout paint style;isolation:isolate}
+#board{will-change:transform;transform:translateZ(0)}
+.bonus-presentation__actor,.bonus-presentation__room,.bonus-presentation__round-intro{will-change:transform,opacity}
+.judgment-confirmation{position:absolute;inset:0;z-index:12;display:grid;place-items:center;overflow:hidden;pointer-events:none;background:radial-gradient(ellipse at 50% 46%,#a11d52dd,#25071bf5 76%);contain:layout paint;isolation:isolate}
+.judgment-confirmation img{width:100%;max-width:none;object-fit:contain;mask-image:linear-gradient(transparent,#000 9% 91%,transparent);will-change:transform;mix-blend-mode:screen}
+.judgment-confirmation:after{content:'';position:absolute;inset:8% 2%;border:2px solid #ffc6f299;box-shadow:inset 0 0 12px #fc82af33;clip-path:polygon(9% 0,91% 0,100% 9%,100% 91%,91% 100%,9% 100%,0 91%,0 9%);pointer-events:none}
+.lcd[data-judgment-confirmed=true] .layered-caption{visibility:hidden}
+
+/* Handle feedback stays on the tray, below every live ball path. */
+.handle{cursor:ns-resize;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;overflow:visible}
+.handle-notch{position:absolute;inset:7%;border:1px solid #d9f3c855;border-radius:50%;transform:rotate(var(--handle-turn,0deg));pointer-events:none}
+.handle-notch:before{content:"";position:absolute;left:46%;top:2%;width:8%;height:18%;border-radius:3px;background:#ddffcb;box-shadow:0 0 5px #8cefbc}
+.handle-readout{position:absolute;right:105%;top:1%;width:130%;padding:4px 3px;background:#142721ee;border:1px solid #b4e6b8;border-radius:7px;opacity:0;pointer-events:none;line-height:1.1;color:#efffdb;box-shadow:0 2px 8px #0008}
+.handle-readout b{font-size:6cqw;font-variant-numeric:tabular-nums}.handle-readout small{display:block;font-size:2.6cqw;white-space:nowrap;margin-top:3px}
+.handle.dragging .handle-readout{opacity:1}.handle.dragging{box-shadow:inset 0 0 12px #96ffd988,0 0 8px #96ffd966}
+.handle-hint{font-size:10px;color:#bbcfbd;margin:0 0 6px;text-align:center;line-height:1.5}
+
+/* Prayer announcement stays inside the LCD; the movie starts after it. */
+.prayer-scene[data-intro="true"] video,.prayer-scene[data-intro="true"] [data-prayer-caption]{visibility:hidden}
+.lcd:has(.prayer-scene[data-intro="true"]) .reels,.lcd:has(.prayer-scene[data-intro="true"]) .cue{visibility:hidden}
+.prayer-intro{position:absolute;inset:0;z-index:3;display:grid;place-items:center;overflow:hidden;background:radial-gradient(ellipse at 50% 48%,#c2ffe077 0%,#3e98645c 28%,#241139 64%,#100b1d 100%)}
+.prayer-intro[hidden]{display:none}
+.prayer-intro::before{content:"";position:absolute;inset:-25%;background:repeating-conic-gradient(from 5deg,#b4ffd900 0deg 9deg,#b4ffd94d 10deg 11deg,#b4ffd900 12deg 22deg);filter:blur(1px);opacity:.6}
+.prayer-intro img{position:relative;width:100%;height:83%;object-fit:contain;transform:scale(var(--prayer-title-scale,1)) rotate(var(--prayer-title-tilt,0deg));filter:drop-shadow(0 0 12px #83ffb9aa)}
+
+.lcd:has(.prayer-scene[data-intro="true"]) .reels{opacity:0!important}
+.prayer-intro .prayer-intro__yua{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:var(--prayer-presence,0);transform:translateY(var(--prayer-drift,0%)) scale(1.06);filter:brightness(calc(.5 + var(--prayer-aura,0)*.55)) drop-shadow(0 0 15px #e1ffc7)}
+.prayer-intro::before{z-index:1;opacity:calc(var(--prayer-aura,0)*.6);mix-blend-mode:screen}
+.prayer-intro__light{position:absolute;z-index:2;left:12%;top:0;width:76%;height:110%;transform:scaleY(var(--prayer-light-drop,0));transform-origin:top;background:linear-gradient(180deg,#fffdebc9,#e2ffb740 60%,transparent);clip-path:polygon(43% 0,57% 0,100% 100%,0 100%);mix-blend-mode:screen;filter:blur(8px)}
+.prayer-intro .prayer-intro__title{z-index:3}
+.prayer-intro .prayer-intro__title[hidden]{display:none}
+.prayer-intro[data-stage="declare"] .prayer-intro__yua{opacity:.4}
+
+.prayer-intro[data-stage="fade"]::before,.prayer-intro[data-stage="fade"] .prayer-intro__light{opacity:0}
+.prayer-scene[data-intro="true"]{background:#160d25}
+.prayer-scene[data-intro="true"] .prayer-glow{visibility:hidden}
+.prayer-feather,.prayer-mote{position:absolute;z-index:2;pointer-events:none;will-change:transform,opacity;mix-blend-mode:screen}
+.prayer-feather{width:5%;height:14%;filter:drop-shadow(0 0 4px #fff5c888)}
+.prayer-feather svg{width:100%;height:100%;overflow:visible}
+.prayer-mote{width:1%;aspect-ratio:1;border-radius:50%;background:#fff8da;box-shadow:0 0 5px 2px #c7ffd9aa}
+.prayer-mote::after{content:"";position:absolute;inset:-130% 30%;background:linear-gradient(transparent,#fff,transparent)}
+.prayer-intro[data-stage="fade"] .prayer-feather,.prayer-intro[data-stage="fade"] .prayer-mote{visibility:hidden}
+
+.prayer-blackout{position:absolute;inset:0;z-index:4;background:#08070d;opacity:0;pointer-events:none}
+.prayer-scene[data-fizzle-reveal="true"],.prayer-scene[data-fizzle-reveal="true"] .prayer-intro{background:transparent}
+.prayer-scene[data-fizzle-reveal="true"] .prayer-intro__yua,.prayer-scene[data-fizzle-reveal="true"] .prayer-intro__light,.prayer-scene[data-fizzle-reveal="true"] .prayer-intro::before{visibility:hidden}
+.lcd:has(.prayer-scene[data-fizzle-reveal="true"]) .portrait,.lcd:has(.prayer-scene[data-fizzle-reveal="true"]) .aura{visibility:visible}
+
+.lcd:has(.prayer-scene[data-fizzle-digits="true"])>.reels{visibility:visible!important;opacity:var(--prayer-fizzle-digit-opacity,1)!important;top:53%;height:28%;left:3%;width:94%;z-index:6}
+.prayer-intro[data-stage="digits"] .prayer-intro__yua,.prayer-intro[data-stage="result"] .prayer-intro__yua{filter:brightness(.7)}
+.prayer-intro[data-stage="normal"] .prayer-feather,.prayer-intro[data-stage="normal"] .prayer-mote{visibility:hidden}
+
+/* Player package has no operator/demo entry points, including forced URL flags. */
+body[data-distribution=true] :is([data-operator-only],[data-debug-only],#settings,#bonus-menu,#motion-diagnostics){display:none!important}
+
+body{-webkit-user-select:none;user-select:none}img,video,canvas{-webkit-user-drag:none;-webkit-touch-callout:none}input,textarea,[contenteditable=true]{-webkit-user-select:text;user-select:text;-webkit-touch-callout:default}

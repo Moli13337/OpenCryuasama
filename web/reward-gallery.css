@@ -1,0 +1,72 @@
+.reward-gallery[hidden],.reward-gallery [hidden]{display:none!important}
+.reward-gallery{position:fixed;inset:0;z-index:10000;box-sizing:border-box;display:grid;place-items:center;padding:20px;background:rgba(5,3,12,.92);color:#f3eafa;font-family:system-ui,-apple-system,"Hiragino Kaku Gothic ProN",sans-serif;isolation:isolate;overscroll-behavior:contain}
+.reward-gallery *{box-sizing:border-box}
+.reward-gallery button{appearance:none;font:inherit;cursor:pointer;touch-action:manipulation;border:1px solid #73627e;border-radius:10px;padding:10px 13px;min-height:44px;background:#281d36;color:#faf2ff;line-height:1.4;white-space:normal}
+.reward-gallery button:hover:not(:disabled){background:#3d2a50;border-color:#c4e59b}
+.reward-gallery button:focus-visible{outline:3px solid #d4ff9c;outline-offset:3px}
+.reward-gallery button:disabled{opacity:.45;cursor:default}
+.reward-gallery__panel{position:relative;width:min(880px,100%);max-height:calc(100dvh - 40px);display:flex;flex-direction:column;overflow:auto;border:1px solid #756082;border-radius:18px;background:radial-gradient(ellipse at 5% 0%,#31203f,transparent 55%),#100a19;box-shadow:0 16px 90px #0009}
+.reward-gallery__header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 22px 10px;flex:none}
+.reward-gallery__eyebrow{display:block;color:#bedb99;font-size:10px;letter-spacing:.23em;font-weight:700}
+.reward-gallery__title{font-size:21px;line-height:1.3;letter-spacing:.04em;margin:4px 0 0}
+.reward-gallery__close{flex:none;font-size:13px!important}
+.reward-gallery__stock{margin:0;padding:0 22px 12px;color:#d3ecb5;font-size:13px;font-variant-numeric:tabular-nums;flex:none}
+.reward-gallery__status{margin:0 20px 12px;border:1px solid #ba7d91;background:#442a39;border-radius:8px;padding:10px;font-size:13px;line-height:1.6}
+.reward-gallery__library{padding:0 22px 20px}
+.reward-gallery__intro,.reward-gallery__note{font-size:13px;color:#d1c6dc;line-height:1.7;margin:0 0 16px}
+.reward-gallery__note{margin:14px 0 0;font-size:11px;color:#b7a9c5}
+.reward-gallery__cards{display:grid;gap:12px}
+.reward-gallery__card{display:grid;grid-template-columns:60px minmax(0,1fr);gap:14px;align-items:start;border:1px solid #534260;background:#24182dc9;border-radius:13px;padding:16px}
+.reward-gallery__card-mark{display:grid;place-items:center;align-self:stretch;min-height:60px;font-family:serif;font-size:40px;line-height:1;color:#d9b1f3;background:linear-gradient(145deg,#452758,#1b1126);border-radius:9px}
+.reward-gallery__card-tier{font-size:10px;letter-spacing:.05em;color:#cee5a7}
+.reward-gallery__card-title{font-size:18px;line-height:1.4;margin:4px 0}
+.reward-gallery__card-subtitle{font-size:12px;color:#c8b7d4;margin:0;line-height:1.5}
+.reward-gallery__card-price{font-size:13px;color:#faf5ff;margin:9px 0;font-variant-numeric:tabular-nums;line-height:1.5}
+.reward-gallery__buy{background:linear-gradient(120deg,#52316b,#352746)!important;border-color:#9875ac!important;font-size:13px!important;font-weight:700!important}
+.reward-gallery__restart{font-size:12px!important;margin-left:8px}
+.reward-gallery__reader{padding:0 22px 18px;display:flex;flex-direction:column;min-height:0;gap:10px;flex:1}
+.reward-gallery[data-view=reader] .reward-gallery__panel{height:min(940px,calc(100dvh - 40px));overflow:hidden}
+.reward-gallery__reader-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex:none}
+.reward-gallery__scene-title{margin:0;font-size:15px;line-height:1.3}
+.reward-gallery__library-back{font-size:12px!important;padding:6px 12px!important}
+.reward-gallery__figure{position:relative;display:grid;place-items:center;flex:1;min-height:80px;overflow:hidden;margin:0;border:1px solid #594165;border-radius:12px;background:radial-gradient(ellipse at 45% 70%,#442648,#120c1e 75%)}
+.reward-gallery__art{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:contain;object-position:center;max-width:none;max-height:none}
+.reward-gallery__image-status{max-width:280px;padding:20px;font-size:13px;line-height:1.6;text-align:center;color:#d1bbdf}
+.reward-gallery__dialogue{display:grid;grid-template-columns:1fr auto;gap:4px 12px;border-left:3px solid #b8d68e;padding:8px 10px;background:#24162d;flex:none;min-height:90px;border-radius:3px 8px 8px 3px}
+.reward-gallery__speaker{font-size:11px;color:#ccdfae;grid-column:1}
+.reward-gallery__text{font-size:16px;line-height:1.6;margin:0;grid-column:1 / -1;grid-row:2;overflow-wrap:anywhere}
+.reward-gallery__progress{font-size:11px;grid-column:2;grid-row:1;color:#bca8cb;font-variant-numeric:tabular-nums}
+.reward-gallery__controls{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;flex:none}
+.reward-gallery__controls button{font-size:12px;min-width:0;padding:10px 8px}
+.reward-gallery__next{background:#3d3f2c!important;border-color:#9aad73!important}
+.reward-gallery__auto[aria-pressed=true],.reward-gallery__image-only[aria-pressed=true]{border-color:#c9f59c;background:#39492b}
+.reward-gallery[data-image-only=true] :is(.reward-gallery__heading,.reward-gallery__stock,.reward-gallery__reader-head,.reward-gallery__previous,.reward-gallery__next,.reward-gallery__auto){display:none}
+.reward-gallery[data-image-only=true] .reward-gallery__header{height:0;padding:0}
+.reward-gallery[data-image-only=true] .reward-gallery__close{position:absolute;right:12px;top:calc(12px + env(safe-area-inset-top));z-index:2;background:#160e21d9}
+.reward-gallery[data-image-only=true] .reward-gallery__reader{display:flex;padding:0;gap:0}
+.reward-gallery[data-image-only=true] .reward-gallery__figure{border:0;border-radius:0;flex:1}
+.reward-gallery[data-image-only=true] .reward-gallery__controls{position:absolute;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));display:block;z-index:2}
+.reward-gallery[data-image-only=true] .reward-gallery__image-only{background:#160e21e6}
+@media(max-width:600px){
+ .reward-gallery{padding:0}
+ .reward-gallery__panel,.reward-gallery[data-view=reader] .reward-gallery__panel{width:100%;max-height:100dvh;border-radius:0;border-width:0;height:100dvh}
+ .reward-gallery__header{padding:calc(12px + env(safe-area-inset-top)) 14px 8px;gap:8px}
+ .reward-gallery__title{font-size:18px}.reward-gallery__close{font-size:12px!important;padding:8px 10px!important}
+ .reward-gallery__stock{padding:0 14px 8px;font-size:12px}
+ .reward-gallery__library{padding:4px 14px calc(16px + env(safe-area-inset-bottom));overflow:auto}
+ .reward-gallery__intro{font-size:12px;margin-bottom:12px}.reward-gallery__card{padding:12px;gap:11px;grid-template-columns:42px minmax(0,1fr)}
+ .reward-gallery__card-mark{font-size:30px}.reward-gallery__card-title{font-size:16px}.reward-gallery__card-price{font-size:12px}
+ .reward-gallery__buy{width:100%;font-size:12px!important}.reward-gallery__restart{margin:6px 0 0;width:100%}
+ .reward-gallery__reader{padding:0 12px calc(10px + env(safe-area-inset-bottom));gap:8px}
+ .reward-gallery__controls{grid-template-columns:1fr 1fr;gap:7px}.reward-gallery__controls button{min-height:44px;padding:8px}
+ .reward-gallery__dialogue{min-height:100px}.reward-gallery__text{font-size:16px;line-height:1.55}
+ .reward-gallery__figure{border-radius:8px}.reward-gallery__status{margin:0 12px 8px}
+}
+@media(max-height:550px) and (min-width:601px){
+ .reward-gallery{padding:8px}.reward-gallery[data-view=reader] .reward-gallery__panel{height:calc(100dvh - 16px)}
+ .reward-gallery__header{padding:8px 14px 4px}.reward-gallery__stock{padding:0 14px 4px}
+ .reward-gallery__reader{display:grid;grid-template-columns:minmax(0,1fr) minmax(230px,.85fr);grid-template-rows:auto 1fr auto;gap:8px;padding:0 14px 10px}
+ .reward-gallery__reader-head{grid-column:1 / -1}.reward-gallery__figure{grid-column:1;grid-row:2 / 4;min-height:0}
+ .reward-gallery__dialogue{grid-column:2;align-content:start}.reward-gallery__controls{grid-column:2;grid-template-columns:1fr 1fr}
+ .reward-gallery[data-image-only=true] .reward-gallery__figure{grid-column:1 / -1;grid-row:2}.reward-gallery[data-image-only=true] .reward-gallery__controls{grid-column:1 / -1;grid-template-columns:repeat(4,1fr)}
+}
